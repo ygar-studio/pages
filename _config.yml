@@ -1,7 +1,7 @@
 title: Ygar Studio
 description: Independent mobile game studio. Games for the curious.
 url: "https://ygar-studio.github.io"
-baseurl: ""
+baseurl: "/pages"
 email: ygar.studio@gmail.com
 
 plugins:
