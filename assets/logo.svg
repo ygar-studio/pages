@@ -1,79 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 90" width="80" height="90">
-  <g transform="translate(48,53)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#1A1200" stroke-width="1.8"/>
-    <g fill="#1A1200">
-      <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
-      <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
-      <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
-      <path d="M-16,8 L-11,4 L10,6 L10,10 L-11,12 Z"/>
-      <path d="M-16,22 L-11,18 L-3,20 L-3,24 L-11,26 Z"/>
-      <path d="M0,22 L4,18 L9,20 L9,24 L4,26 Z"/>
-      <path d="M13,22 L17,18 L22,20 L22,24 L17,26 Z"/>
-    </g>
-  </g>
-  <g transform="translate(47,52)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#2B1D00" stroke-width="1.8"/>
-    <g fill="#2B1D00">
-      <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
-      <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
-      <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
-      <path d="M-16,8 L-11,4 L10,6 L10,10 L-11,12 Z"/>
-      <path d="M-16,22 L-11,18 L-3,20 L-3,24 L-11,26 Z"/>
-      <path d="M0,22 L4,18 L9,20 L9,24 L4,26 Z"/>
-      <path d="M13,22 L17,18 L22,20 L22,24 L17,26 Z"/>
-    </g>
-  </g>
-  <g transform="translate(46,51)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#3C2900" stroke-width="1.8"/>
-    <g fill="#3C2900">
-      <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
-      <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
-      <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
-      <path d="M-16,8 L-11,4 L10,6 L10,10 L-11,12 Z"/>
-      <path d="M-16,22 L-11,18 L-3,20 L-3,24 L-11,26 Z"/>
-      <path d="M0,22 L4,18 L9,20 L9,24 L4,26 Z"/>
-      <path d="M13,22 L17,18 L22,20 L22,24 L17,26 Z"/>
-    </g>
-  </g>
-  <g transform="translate(45,50)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#4D3500" stroke-width="1.8"/>
-    <g fill="#4D3500">
-      <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
-      <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
-      <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
-      <path d="M-16,8 L-11,4 L10,6 L10,10 L-11,12 Z"/>
-      <path d="M-16,22 L-11,18 L-3,20 L-3,24 L-11,26 Z"/>
-      <path d="M0,22 L4,18 L9,20 L9,24 L4,26 Z"/>
-      <path d="M13,22 L17,18 L22,20 L22,24 L17,26 Z"/>
-    </g>
-  </g>
-  <g transform="translate(44,49)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#5E4100" stroke-width="1.8"/>
-    <g fill="#5E4100">
-      <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
-      <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
-      <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
-      <path d="M-16,8 L-11,4 L10,6 L10,10 L-11,12 Z"/>
-      <path d="M-16,22 L-11,18 L-3,20 L-3,24 L-11,26 Z"/>
-      <path d="M0,22 L4,18 L9,20 L9,24 L4,26 Z"/>
-      <path d="M13,22 L17,18 L22,20 L22,24 L17,26 Z"/>
-    </g>
-  </g>
-  <g transform="translate(43,48)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#6F4D00" stroke-width="1.8"/>
-    <g fill="#6F4D00">
-      <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
-      <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
-      <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
-      <path d="M-16,8 L-11,4 L10,6 L10,10 L-11,12 Z"/>
-      <path d="M-16,22 L-11,18 L-3,20 L-3,24 L-11,26 Z"/>
-      <path d="M0,22 L4,18 L9,20 L9,24 L4,26 Z"/>
-      <path d="M13,22 L17,18 L22,20 L22,24 L17,26 Z"/>
-    </g>
-  </g>
   <g transform="translate(42,47)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#806200" stroke-width="1.8"/>
-    <g fill="#806200">
+    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.8"/>
+    <g fill="#FFFFFF" fill-opacity="0.35">
       <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
       <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
       <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
@@ -84,8 +12,8 @@
     </g>
   </g>
   <g transform="translate(41,46)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#916E00" stroke-width="1.8"/>
-    <g fill="#916E00">
+    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1.8"/>
+    <g fill="#FFFFFF" fill-opacity="0.6">
       <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
       <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
       <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
@@ -96,8 +24,8 @@
     </g>
   </g>
   <g transform="translate(40,45)">
-    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
-    <g fill="#FFFFFF">
+    <rect x="-32" y="-40" width="64" height="80" rx="10" fill="none" stroke="#D4A947" stroke-width="1.8"/>
+    <g fill="#D4A947">
       <path d="M-16,-24 L-11,-28 L14,-26 L14,-22 L-11,-20 Z"/>
       <path d="M-16,-8 L-11,-12 L3,-10 L3,-6 L-11,-4 Z"/>
       <path d="M8,-8 L12,-12 L18,-10 L18,-6 L12,-4 Z"/>
