@@ -69,13 +69,30 @@ sitemap:
   <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t enko.feat_label %}</p>
   <h2 class="font-display text-2xl tracking-wide mb-8">{% t enko.feat_title %}</h2>
   <ul class="grid sm:grid-cols-2 gap-4">
-    {% assign feat_keys = "feat1,feat2,feat3,feat4,feat5,feat6" | split: "," %}
-    {% for key in feat_keys %}
     <li class="p-5 rounded-xl border border-border bg-card">
-      <div class="font-serif font-bold text-sm mb-1">{% t enko[key | append: "_title"] %}</div>
-      <div class="text-xs text-muted leading-relaxed">{% t enko[key | append: "_body"] %}</div>
+      <div class="font-serif font-bold text-sm mb-1">{% t enko.feat1_title %}</div>
+      <div class="text-xs text-muted leading-relaxed">{% t enko.feat1_body %}</div>
     </li>
-    {% endfor %}
+    <li class="p-5 rounded-xl border border-border bg-card">
+      <div class="font-serif font-bold text-sm mb-1">{% t enko.feat2_title %}</div>
+      <div class="text-xs text-muted leading-relaxed">{% t enko.feat2_body %}</div>
+    </li>
+    <li class="p-5 rounded-xl border border-border bg-card">
+      <div class="font-serif font-bold text-sm mb-1">{% t enko.feat3_title %}</div>
+      <div class="text-xs text-muted leading-relaxed">{% t enko.feat3_body %}</div>
+    </li>
+    <li class="p-5 rounded-xl border border-border bg-card">
+      <div class="font-serif font-bold text-sm mb-1">{% t enko.feat4_title %}</div>
+      <div class="text-xs text-muted leading-relaxed">{% t enko.feat4_body %}</div>
+    </li>
+    <li class="p-5 rounded-xl border border-border bg-card">
+      <div class="font-serif font-bold text-sm mb-1">{% t enko.feat5_title %}</div>
+      <div class="text-xs text-muted leading-relaxed">{% t enko.feat5_body %}</div>
+    </li>
+    <li class="p-5 rounded-xl border border-border bg-card">
+      <div class="font-serif font-bold text-sm mb-1">{% t enko.feat6_title %}</div>
+      <div class="text-xs text-muted leading-relaxed">{% t enko.feat6_body %}</div>
+    </li>
   </ul>
 </section>
 

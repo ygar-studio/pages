@@ -27,10 +27,11 @@ sitemap:
   <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s2_title %}</h2>
   <p class="font-serif text-sm text-muted leading-relaxed mb-2">{% t privacy.s2_intro %}</p>
   <ul class="list-disc ml-5 mb-6 space-y-1">
-    {% assign li_keys = "s2_li1,s2_li2,s2_li3,s2_li4,s2_li5" | split: "," %}
-    {% for key in li_keys %}
-    <li class="font-serif text-sm text-muted">{% t privacy[key] %}</li>
-    {% endfor %}
+    <li class="font-serif text-sm text-muted">{% t privacy.s2_li1 %}</li>
+    <li class="font-serif text-sm text-muted">{% t privacy.s2_li2 %}</li>
+    <li class="font-serif text-sm text-muted">{% t privacy.s2_li3 %}</li>
+    <li class="font-serif text-sm text-muted">{% t privacy.s2_li4 %}</li>
+    <li class="font-serif text-sm text-muted">{% t privacy.s2_li5 %}</li>
   </ul>
 
   <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s3_title %}</h2>
