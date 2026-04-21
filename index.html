@@ -1,8 +1,23 @@
 ---
 layout: default
+title: "Ygar Studio — Games for the curious"
+description: "Independent mobile game studio. No ads, no noise. Just well-crafted games."
 sitemap:
   priority: 1.0
+schema:
+  type: Organization
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ygar Studio",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "logo": "{{ site.url }}{{ site.baseurl }}/assets/logo.svg",
+  "email": "{{ site.email }}",
+  "description": "{{ site.description }}"
+}
+</script>
 {% if site.active_lang == site.default_locale %}{% assign lp = "" %}{% else %}{% assign lp = "/" | append: site.active_lang %}{% endif %}
 
 <!-- HERO -->

@@ -4,9 +4,21 @@ url: "https://ygar-studio.github.io"
 baseurl: "/pages"
 email: ygar.studio@gmail.com
 
+logo: /assets/logo.svg
+
+twitter:
+  username: ygastudio
+  card: summary
+
+social:
+  name: Ygar Studio
+  links:
+    - https://play.google.com/store/apps/developer?id=Ygar+Studio
+
 plugins:
   - jekyll-multiple-languages-plugin
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 languages:
   - en

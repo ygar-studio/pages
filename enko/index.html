@@ -6,6 +6,27 @@ sticky_nav: true
 sitemap:
   priority: 0.9
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Enko Clues",
+  "operatingSystem": "Android",
+  "applicationCategory": "GameApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Six cryptic clues. One answer. A riddle game for the curious.",
+  "url": "{{ site.url }}{{ site.baseurl }}/enko/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.ygar.app.enko",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ygar Studio"
+  }
+}
+</script>
 {% if site.active_lang == site.default_locale %}{% assign lp = "" %}{% else %}{% assign lp = "/" | append: site.active_lang %}{% endif %}
 
 <!-- HERO -->

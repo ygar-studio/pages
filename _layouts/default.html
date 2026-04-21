@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{% if page.title %}{{ page.title }} — {% endif %}Ygar Studio</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+  {% seo %}
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/logo.svg' | relative_url }}"/>
+
+  {% comment %}hreflang alternates for EN/FR{% endcomment %}
+  {% assign canonical_path = page.url | remove_first: '/fr' %}
+  <link rel="alternate" hreflang="en"        href="{{ site.url }}{{ site.baseurl }}{{ canonical_path }}"/>
+  <link rel="alternate" hreflang="fr"        href="{{ site.url }}{{ site.baseurl }}/fr{{ canonical_path }}"/>
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ canonical_path }}"/>
+  <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Metamorphous&family=Noto+Sans:wght@400;500&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
