@@ -73,7 +73,7 @@ lang_fr: /fr/
     <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Ygar Studio" class="w-16 h-auto" style="margin-top:-10px"/>
     <div>
       <div class="font-script text-[4.5rem] leading-none" style="font-family:'Macondo Swash Caps',cursive;color:#D4A947;text-shadow:2px 2px 0 rgba(255,255,255,0.3)">Ygar</div>
-      <div class="font-serif text-base tracking-[0.4em] uppercase text-white" style="margin-top:2px">Studio</div>
+      <div class="font-serif text-base tracking-[0.4em] uppercase text-white mt-3">Studio</div>
       <div class="text-muted/40 text-base tracking-widest mt-1" style="font-family:'Noto Sans','Segoe UI Historic',sans-serif">𒅗 𒃻</div>
     </div>
   </div>
@@ -92,8 +92,8 @@ lang_fr: /fr/
     // --- Slow-following glow ---
     var targetX = 50, targetY = 50, curX = 50, curY = 50;
     function animateGlow() {
-      curX += (targetX - curX) * 0.04;
-      curY += (targetY - curY) * 0.04;
+      curX += (targetX - curX) * 0.008;
+      curY += (targetY - curY) * 0.008;
       hero.style.setProperty('--mx', curX + 'px');
       hero.style.setProperty('--my', curY + 'px');
       requestAnimationFrame(animateGlow);
@@ -103,11 +103,13 @@ lang_fr: /fr/
       var r = hero.getBoundingClientRect();
       targetX = e.clientX - r.left;
       targetY = e.clientY - r.top;
+      mouseX = targetX; mouseY = targetY;
     });
     hero.addEventListener('mouseenter', function () { hero.classList.add('is-hover'); });
     hero.addEventListener('mouseleave', function () { hero.classList.remove('is-hover'); });
 
     // --- Fireflies ---
+    var mouseX = -9999, mouseY = -9999;
     var COLORS = [
       'rgba(212,169,71,',   // gold
       'rgba(255,210,100,',  // warm yellow
@@ -143,13 +145,14 @@ lang_fr: /fr/
       }
       var wpIdx = 0;
 
-      var speed = rand(0.3, 1.1);    // px per frame (slow)
+      var speed = rand(0.12, 0.45);    // much slower
       var baseOpacity = rand(0.55, 1.0);
       var blinkPhase = rand(0, Math.PI * 2);
-      var blinkSpeed = rand(0.015, 0.045);
+      var blinkSpeed = rand(0.008, 0.025);  // slower blink = longer apparent life
       var glowSize = size * rand(3, 7);
+      var mousePull = rand(0.0005, 0.003); // attraction strength toward mouse
 
-      flies.push({ el, x, y, waypoints, wpIdx, speed, baseOpacity, blinkPhase, blinkSpeed, color, size, glowSize });
+      flies.push({ el, x, y, waypoints, wpIdx, speed, baseOpacity, blinkPhase, blinkSpeed, color, size, glowSize, mousePull });
     }
 
     for (var i = 0; i < COUNT; i++) createFly();
@@ -159,17 +162,25 @@ lang_fr: /fr/
       for (var i = 0; i < flies.length; i++) {
         var f = flies[i];
         var wp = f.waypoints[f.wpIdx];
-        var dx = wp.x - f.x, dy = wp.y - f.y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < f.speed + 1) {
+
+        // Blend waypoint direction with mouse attraction
+        var wdx = wp.x - f.x, wdy = wp.y - f.y;
+        var wdist = Math.sqrt(wdx * wdx + wdy * wdy);
+        var mdx = mouseX - f.x, mdy = mouseY - f.y;
+        var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+        var pull = (mdist < 300 && mouseX > 0) ? f.mousePull * (1 - mdist / 300) * 80 : 0;
+        var nx = (wdist > 0 ? wdx / wdist : 0) + (mdist > 0 ? (mdx / mdist) * pull : 0);
+        var ny = (wdist > 0 ? wdy / wdist : 0) + (mdist > 0 ? (mdy / mdist) * pull : 0);
+        var nl = Math.sqrt(nx * nx + ny * ny) || 1;
+
+        if (wdist < f.speed + 1) {
           f.wpIdx = (f.wpIdx + 1) % f.waypoints.length;
-          // Occasionally add a random detour
           if (Math.random() < 0.15) {
             f.waypoints[f.wpIdx] = { x: rand(0.03, 0.97) * hw, y: rand(0.03, 0.97) * hh };
           }
         } else {
-          f.x += (dx / dist) * f.speed;
-          f.y += (dy / dist) * f.speed;
+          f.x += (nx / nl) * f.speed;
+          f.y += (ny / nl) * f.speed;
         }
         f.blinkPhase += f.blinkSpeed;
         var opacity = f.baseOpacity * (0.5 + 0.5 * Math.sin(f.blinkPhase));
