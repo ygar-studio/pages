@@ -62,9 +62,17 @@
     <div class="flex items-center gap-2">
       {% if site.active_lang == site.default_locale %}
         <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">EN</span>
-        <a href="{{ '/fr' | append: page.url | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
+        {% if page.lang_fr %}
+          <a href="{{ page.lang_fr | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
+        {% else %}
+          <a href="{{ '/fr' | append: page.url | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
+        {% endif %}
       {% else %}
-        <a href="{{ page.url | remove_first: '/fr' | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
+        {% if page.lang_en %}
+          <a href="{{ page.lang_en | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
+        {% else %}
+          <a href="{{ page.url | remove_first: '/fr' | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
+        {% endif %}
         <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">FR</span>
       {% endif %}
     </div>

@@ -1,27 +1,6 @@
 # Ygar Studio — GitHub Pages
 
 Static GitHub Pages site for **Ygar Studio**, an independent Android game studio.
-Published at: `https://<username>.github.io/<repo>/` (configure in repo Settings → Pages → Source: GitHub Actions).
-
-## Project structure
-
-```
-teststdy/
-├── index.html                        # Studio landing page only (EN/FR toggle)
-├── enko/
-│   ├── index.html                    # Enko Clues app page (screenshots, features, categories)
-│   └── privacy-policy.html           # Bilingual privacy policy (EN/FR toggle)
-├── assets/
-│   ├── logo.svg                      # Ygar Studio tablet logo (3D purple extrusion)
-│   ├── enko-icon.svg                 # Enko Clues app icon (globe with grid lines)
-│   └── enko/
-│       ├── icon.png                  # App store icon (copied from enko/store/)
-│       └── screenshots/1–4.jpg       # Store screenshots (copied from enko/store/)
-├── .github/workflows/deploy.yml      # GitHub Pages Actions deploy
-├── .nojekyll
-├── .gitignore
-└── CLAUDE.md
-```
 
 ## Conventions
 
@@ -48,15 +27,28 @@ All original assets live in **`C:\Users\Sesa725153\AndroidStudioProjects\enko`**
 
 ## Design tokens (Tailwind config)
 
-| Token | Value |
-|---|---|
-| dark | `#050D1F` |
-| card | `#0D1330` |
-| accent | `#7C3AED` |
-| accent-light | `#818CF8` |
-| border | `#2D1A4A` |
-| border-light | `#3D2A5A` |
-| muted | `#9CA3AF` |
+Shared config — Enko accent colors. Studio home uses gold overrides via inline styles.
+
+| Token | Value | Usage |
+|---|---|---|
+| dark | `#050D1F` | Page background |
+| card | `#0D1330` | Card background |
+| accent | `#7C3AED` | Enko purple (buttons, borders) |
+| accent-light | `#818CF8` | Enko purple light (labels) |
+| border | `#2D1A4A` | Card/section borders |
+| border-light | `#3D2A5A` | Hover borders |
+| muted | `#9CA3AF` | Secondary text |
+
+Studio home gold overrides (inline styles):
+- Gold accent: `#D4A947`
+- Hero glow: `rgba(185,132,12,0.14)`
+
+Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white front face.
+
+## Typography
+- **Studio logo**: Macondo Swash Caps (Google Font) — must be used for 'ygar' in studio logo.
+- **Titles**: Metamorphous (Google Font)
+- **Body / UI text**: Noto Sans (Google Font) — clean, readable sans-serif with broad Unicode support
 
 ## App info
 

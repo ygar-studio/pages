@@ -6,6 +6,8 @@ sitemap:
   priority: 1.0
 schema:
   type: Organization
+lang_en: /
+lang_fr: /fr/
 ---
 <script type="application/ld+json">
 {
@@ -22,7 +24,7 @@ schema:
 
 <!-- HERO -->
 <header class="relative flex flex-col items-center justify-center min-h-screen px-6 pt-16 overflow-hidden"
-        style="background: radial-gradient(ellipse 70% 50% at 50% 65%, rgba(124,58,237,0.15) 0%, transparent 70%), linear-gradient(180deg,#050D1F 0%,#0A1128 60%,#1A0D2E 100%)">
+        style="background: radial-gradient(ellipse 70% 50% at 50% 65%, rgba(185,132,12,0.14) 0%, transparent 70%), linear-gradient(180deg,#050D1F 0%,#0A1128 60%,#1A0D2E 100%)">
 
   <div class="absolute top-20 left-6 w-20 h-20 border-t border-l border-muted/20 pointer-events-none"></div>
   <div class="absolute bottom-8 right-6 w-20 h-20 border-b border-r border-muted/20 pointer-events-none"></div>
@@ -45,7 +47,7 @@ schema:
 <!-- APPS -->
 <section class="max-w-4xl mx-auto px-6 py-20 border-t border-border">
 
-  <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t home.games_label %}</p>
+  <p class="text-[11px] tracking-[0.22em] uppercase mb-3" style="color:#D4A947">{% t home.games_label %}</p>
   <h2 class="font-display text-2xl tracking-wide mb-10">{% t home.games_title %}</h2>
 
   <a href="{{ lp | append: '/enko/' | relative_url }}"
@@ -54,7 +56,7 @@ schema:
     <div class="flex-1 min-w-0">
       <div class="font-display text-xl tracking-wide text-white mb-1">Enko Clues</div>
       <div class="font-serif text-sm text-muted">{% t home.enko_short %}</div>
-      <div class="mt-3 text-xs tracking-widest uppercase text-accent-light group-hover:text-white transition-colors">
+      <div class="mt-3 text-xs tracking-widest uppercase group-hover:text-white transition-colors" style="color:#D4A947">
         {% t home.enko_cta %}
       </div>
     </div>
