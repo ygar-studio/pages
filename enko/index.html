@@ -29,7 +29,7 @@ lang_fr: /fr/enko/
   }
 }
 </script>
-{% if site.active_lang == site.default_locale %}{% assign lp = "" %}{% else %}{% assign lp = "/" | append: site.active_lang %}{% endif %}
+{% if site.lang == "fr" %}{% assign privacy_url = "/fr/enko/privacy-policy/" %}{% else %}{% assign privacy_url = "/enko/privacy-policy/" %}{% endif %}
 
 <!-- HERO -->
 <header class="relative flex flex-col items-center justify-center px-6 py-24 overflow-hidden text-center"
@@ -125,7 +125,7 @@ lang_fr: /fr/enko/
 
 <!-- PRIVACY LINK -->
 <section class="max-w-4xl mx-auto px-6 py-10 border-t border-border">
-  <a href="{{ lp | append: '/enko/privacy-policy/' | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">
+  <a href="{{ privacy_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">
     {% t nav.privacy %} →
   </a>
 </section>

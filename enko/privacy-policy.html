@@ -2,6 +2,7 @@
 layout: default
 title: "Privacy Policy — Enko Clues"
 sticky_nav: true
+permalink: /enko/privacy-policy/
 sitemap:
   priority: 0.5
 lang_en: /enko/privacy-policy/
@@ -44,7 +45,7 @@ lang_fr: /fr/enko/privacy-policy/
   <p class="font-serif text-sm text-muted leading-relaxed mb-3">{% t privacy.s4_body2 %}</p>
   <p class="font-serif text-sm text-muted leading-relaxed mb-6">
     {% t privacy.s4_body3 %}
-    {% if site.active_lang == site.default_locale %}
+    {% if site.lang == site.default_lang %}
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-accent-light hover:underline">{% t privacy.s4_google_link %}</a>
     {% else %}
       <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener" class="text-accent-light hover:underline">{% t privacy.s4_google_link %}</a>

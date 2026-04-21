@@ -1,0 +1,104 @@
+---
+layout: default
+title: "404 — Lost in the Tablet Archive"
+permalink: /404.html
+sitemap: false
+---
+<style>
+  @keyframes err-float    { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-12px); } }
+  @keyframes err-glow     { 0%,100% { opacity:.4; } 50% { opacity:.9; } }
+  @keyframes err-twinkle  { 0%,100% { opacity:.15; } 50% { opacity:.8; } }
+  @keyframes err-scroll-v { 0% { transform:translateY(-100%); } 100% { transform:translateY(100%); } }
+
+  .err-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(185,132,12,0.14) 0%, transparent 70%),
+      linear-gradient(180deg,#050D1F 0%,#0A1128 60%,#1A0D2E 100%);
+  }
+  .err-tablet {
+    position:relative;
+    width:220px; height:280px;
+    border:2px solid #D4A947;
+    border-radius:14px;
+    background:linear-gradient(145deg, rgba(212,169,71,0.08), rgba(212,169,71,0.02));
+    box-shadow:0 0 60px rgba(212,169,71,0.25), inset 0 0 40px rgba(212,169,71,0.08);
+    animation: err-float 6s ease-in-out infinite;
+    overflow:hidden;
+  }
+  .err-tablet::before,
+  .err-tablet::after {
+    content:""; position:absolute; left:14px; right:14px; height:1px;
+    background:rgba(212,169,71,0.25);
+  }
+  .err-tablet::before { top:28%; }
+  .err-tablet::after  { top:62%; }
+  .err-crack {
+    position:absolute; top:10%; left:50%; width:3px; height:80%;
+    background:linear-gradient(180deg, transparent, #050D1F 20%, #050D1F 80%, transparent);
+    transform:translateX(-50%) rotate(8deg);
+    box-shadow:0 0 8px rgba(0,0,0,0.6);
+  }
+  .err-glyphs {
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:space-around; padding:24px 18px;
+    color:#D4A947; font-size:28px; letter-spacing:6px;
+    font-family:'Noto Sans','Segoe UI Historic',sans-serif;
+    text-shadow:0 0 10px rgba(212,169,71,0.4);
+  }
+  .err-glyphs span { animation: err-glow 4s ease-in-out infinite; }
+  .err-glyphs span:nth-child(2) { animation-delay:1s; opacity:.7; }
+  .err-glyphs span:nth-child(3) { animation-delay:2s; opacity:.5; }
+  .err-star {
+    position:absolute; width:2px; height:2px; background:#D4A947; border-radius:50%;
+    box-shadow:0 0 4px #D4A947; animation: err-twinkle 4s ease-in-out infinite;
+  }
+</style>
+
+<main class="err-bg relative min-h-screen flex flex-col items-center justify-center px-6 py-24 overflow-hidden">
+
+  <div class="absolute top-20 left-6 w-20 h-20 border-t border-l border-muted/20 pointer-events-none"></div>
+  <div class="absolute bottom-8 right-6 w-20 h-20 border-b border-r border-muted/20 pointer-events-none"></div>
+
+  <div class="err-star" style="top:14%;left:12%;animation-delay:0s"></div>
+  <div class="err-star" style="top:22%;left:84%;animation-delay:0.6s"></div>
+  <div class="err-star" style="top:70%;left:6%;animation-delay:1.2s"></div>
+  <div class="err-star" style="top:82%;left:90%;animation-delay:1.8s"></div>
+  <div class="err-star" style="top:34%;left:48%;animation-delay:2.4s"></div>
+  <div class="err-star" style="top:88%;left:38%;animation-delay:3s"></div>
+
+  <!-- Broken cuneiform tablet -->
+  <div class="err-tablet mb-10">
+    <div class="err-glyphs">
+      <span>𒄿 𒌓 𒁺</span>
+      <span>𒀭 𒆠 𒉌</span>
+      <span>𒈨 𒀠 𒊩</span>
+    </div>
+    <div class="err-crack"></div>
+  </div>
+
+  <p class="text-[11px] tracking-[0.3em] uppercase mb-3" style="color:#D4A947">Error · 404</p>
+
+  <h1 class="font-display text-4xl md:text-5xl tracking-[0.15em] text-white mb-4 text-center">
+    TABLET LOST
+  </h1>
+
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-12 h-px bg-muted/30"></div>
+    <div class="w-1.5 h-1.5 rounded-full" style="background:#D4A947"></div>
+    <div class="w-12 h-px bg-muted/30"></div>
+  </div>
+
+  <p class="font-serif italic text-muted text-lg text-center max-w-md mb-2">
+    The scribe cannot find this page in the archive.
+  </p>
+  <p class="font-serif italic text-muted/60 text-sm text-center max-w-md mb-10" lang="fr">
+    Le scribe n'a pas retrouvé cette tablette dans les archives.
+  </p>
+
+  <a href="{{ '/' | relative_url }}"
+     class="inline-flex items-center gap-3 px-6 py-3 border rounded hover:bg-white/5 transition-colors no-underline"
+     style="border-color:#D4A947;color:#D4A947">
+    <span class="font-sans text-sm tracking-[0.15em] uppercase">Return to the studio</span>
+  </a>
+
+</main>

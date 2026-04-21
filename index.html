@@ -20,7 +20,7 @@ lang_fr: /fr/
   "description": "{{ site.description }}"
 }
 </script>
-{% if site.active_lang == site.default_locale %}{% assign lp = "" %}{% else %}{% assign lp = "/" | append: site.active_lang %}{% endif %}
+{% if site.lang == "fr" %}{% assign enko_url = "/fr/enko/" %}{% else %}{% assign enko_url = "/enko/" %}{% endif %}
 
 <style>
   @keyframes ygar-spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -86,7 +86,7 @@ lang_fr: /fr/
   <p class="text-[11px] tracking-[0.22em] uppercase mb-3" style="color:#D4A947">{% t home.games_label %}</p>
   <h2 class="font-display text-2xl tracking-wide mb-10">{% t home.games_title %}</h2>
 
-  <a href="{{ lp | append: '/enko/' | relative_url }}"
+  <a href="{{ enko_url | relative_url }}"
      class="group flex items-center gap-6 p-6 rounded-xl border border-border bg-card hover:border-border-light transition-colors no-underline">
     <img src="{{ '/assets/enko-icon.svg' | relative_url }}" alt="Enko Clues" class="w-20 h-20 rounded-2xl flex-shrink-0"/>
     <div class="flex-1 min-w-0">

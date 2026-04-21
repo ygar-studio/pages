@@ -23,7 +23,7 @@ plugins:
 languages:
   - en
   - fr
-default_locale: en
+default_lang: en
 exclude_from_localizations:
   - assets
   - .github
@@ -39,6 +39,8 @@ exclude:
   - .idea/
   - vendor/
   - .bundle/
+
+permalink: pretty
 
 sass:
   style: compressed

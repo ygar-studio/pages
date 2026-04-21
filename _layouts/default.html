@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.active_lang }}">
+<html lang="{{ site.lang }}">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -43,16 +43,18 @@
 </head>
 <body class="text-white font-sans min-h-screen">
 
-  {% comment %}Language-aware base path: "" for EN, "/fr" for FR{% endcomment %}
-  {% if site.active_lang == site.default_locale %}
-    {% assign lp = "" %}
+  {% comment %}Language-aware home/enko paths (explicit, no string concatenation){% endcomment %}
+  {% if site.lang == "fr" %}
+    {% assign home_url = "/fr/" %}
+    {% assign enko_url = "/fr/enko/" %}
   {% else %}
-    {% assign lp = "/" | append: site.active_lang %}
+    {% assign home_url = "/" %}
+    {% assign enko_url = "/enko/" %}
   {% endif %}
 
   <!-- NAV -->
   <nav class="{% if page.sticky_nav %}sticky{% else %}fixed{% endif %} inset-x-0 top-0 z-50 flex items-center justify-between px-6 h-16 border-b border-border bg-dark/90 backdrop-blur-md">
-    <a href="{{ lp | append: '/' | relative_url }}" class="flex items-center gap-3 no-underline">
+    <a href="{{ home_url | relative_url }}" class="flex items-center gap-3 no-underline">
       <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Ygar Studio" class="w-8 h-auto"/>
       <div class="leading-none">
         <div class="font-script text-xl leading-none" style="font-family:'Macondo Swash Caps',cursive;color:#D4A947;text-shadow:1px 1px 0 rgba(255,255,255,0.25)">Ygar</div>
@@ -60,20 +62,12 @@
       </div>
     </a>
     <div class="flex items-center gap-2">
-      {% if site.active_lang == site.default_locale %}
-        <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">EN</span>
-        {% if page.lang_fr %}
-          <a href="{{ page.lang_fr | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
-        {% else %}
-          <a href="{{ '/fr' | append: page.url | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
-        {% endif %}
-      {% else %}
-        {% if page.lang_en %}
-          <a href="{{ page.lang_en | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
-        {% else %}
-          <a href="{{ page.url | remove_first: '/fr' | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
-        {% endif %}
+      {% if site.lang == "fr" %}
+        <a href="{{ page.lang_en | default: '/' | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
         <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">FR</span>
+      {% else %}
+        <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">EN</span>
+        <a href="{{ page.lang_fr | default: '/fr/' | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
       {% endif %}
     </div>
   </nav>
@@ -89,8 +83,8 @@
         <span class="font-sans text-[10px] tracking-widest uppercase text-muted/40">Studio</span>
       </div>
       <nav class="flex flex-wrap justify-center gap-5">
-        <a href="{{ lp | append: '/' | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t nav.home %}</a>
-        <a href="{{ lp | append: '/enko/' | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Enko Clues</a>
+        <a href="{{ home_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t nav.home %}</a>
+        <a href="{{ enko_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Enko Clues</a>
         <a href="mailto:{{ site.email }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t global.contact %}</a>
       </nav>
       <p class="text-xs text-muted/30 tracking-wide">{% t global.copyright %}</p>
