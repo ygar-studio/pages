@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ygar Studio — Games for the Curious</title>
+  <meta name="description" content="Ygar Studio makes thoughtful mobile games. No ads, no dopamine traps — just well-crafted experiences for the curious mind."/>
+  <meta property="og:title" content="Ygar Studio"/>
+  <meta property="og:description" content="Games for the curious. No ads, no noise."/>
+  <meta property="og:image" content="assets/enko-icon.svg"/>
+  <link rel="icon" type="image/svg+xml" href="assets/enko-icon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Noto+Sans:wght@400;500&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark:        #050D1F;
+      --bg-card:        #0D1330;
+      --bg-gradient-end:#1A0D2E;
+      --text-primary:   #FFFFFF;
+      --text-secondary: #9CA3AF;
+      --text-muted:     #6B7280;
+      --accent:         #7C3AED;
+      --accent-light:   #818CF8;
+      --border:         #2D1A4A;
+      --border-light:   #3D2A5A;
+      --correct:        #22C55E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: 'Noto Sans', system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 64px;
+      background: rgba(5, 13, 31, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-brand img { width: 32px; height: 36px; }
+
+    .nav-brand-text {
+      font-family: 'Metamorphous', serif;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 2rem 4rem;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 60%, rgba(124,58,237,0.18) 0%, transparent 70%),
+        linear-gradient(180deg, #050D1F 0%, #0A1128 60%, #1A0D2E 100%);
+    }
+
+    /* corner ornaments */
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      width: 120px; height: 120px;
+      border-color: rgba(156,163,175,0.2);
+      border-style: solid;
+    }
+    .hero::before {
+      top: 88px; left: 2rem;
+      border-width: 1px 0 0 1px;
+    }
+    .hero::after {
+      bottom: 2rem; right: 2rem;
+      border-width: 0 1px 1px 0;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-studio {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-studio img { width: 52px; height: 58px; }
+
+    .hero-studio-name {
+      text-align: left;
+    }
+
+    .studio-wordmark {
+      font-family: 'Metamorphous', serif;
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      color: var(--text-primary);
+    }
+
+    .studio-tagline {
+      font-family: 'Noto Serif', serif;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .divider-line {
+      width: 80px; height: 1px;
+      background: rgba(156,163,175,0.35);
+    }
+    .divider-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--text-secondary);
+    }
+
+    /* App icon */
+    .app-icon-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    .app-icon-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .app-icon-wrap img {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: 'Metamorphous', serif;
+      font-size: clamp(3rem, 10vw, 5.5rem);
+      letter-spacing: 0.08em;
+      line-height: 0.95;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-subtitle {
+      font-family: 'Noto Serif', serif;
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-style: italic;
+      color: var(--text-secondary);
+      letter-spacing: 0.12em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tagline {
+      font-family: 'Noto Serif', serif;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-tagline em {
+      font-style: normal;
+      color: var(--text-primary);
+    }
+
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: transparent;
+      border: 1.5px solid var(--accent);
+      border-radius: 6px;
+      color: var(--text-primary);
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-play:hover {
+      background: rgba(124,58,237,0.15);
+      border-color: var(--accent-light);
+    }
+    .btn-play svg { width: 20px; height: 20px; }
+
+    /* ── SECTION SHARED ── */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Metamorphous', serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-body {
+      color: var(--text-secondary);
+      font-family: 'Noto Serif', serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      border-top: 1px solid var(--border);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .feature-card:hover { border-color: var(--border-light); }
+
+    .feature-icon {
+      width: 36px; height: 36px;
+      margin-bottom: 0.9rem;
+      color: var(--accent-light);
+    }
+
+    .feature-title {
+      font-family: 'Noto Serif', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── CATEGORIES ── */
+    .categories {
+      border-top: 1px solid var(--border);
+    }
+
+    .categories-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 2rem;
+    }
+
+    .cat-chip {
+      padding: 6px 14px;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+    }
+
+    /* ── DESIGN ── */
+    .design {
+      border-top: 1px solid var(--border);
+    }
+
+    .design-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .design-inner { grid-template-columns: 1fr; }
+    }
+
+    .palette {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .swatch {
+      width: 48px; height: 48px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-logo img { width: 28px; height: 31px; }
+    .footer-logo span {
+      font-family: 'Metamorphous', serif;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text-secondary); }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .cuneiform {
+      font-family: 'Noto Sans', 'Segoe UI Historic', sans-serif;
+      opacity: 0.55;
+    }
+
+    /* ── RESPONSIVE NAV ── */
+    @media (max-width: 520px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-brand">
+      <img src="assets/logo.svg" alt="Ygar Studio"/>
+      <span class="nav-brand-text">Ygar Studio</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="privacy-policy.html">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-studio">
+        <img src="assets/logo.svg" alt="Ygar Studio logo"/>
+        <div class="hero-studio-name">
+          <div class="studio-wordmark">Ygar Studio</div>
+          <div class="studio-tagline">Games for the curious</div>
+        </div>
+      </div>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="app-icon-wrap">
+        <img src="assets/enko-icon.svg" alt="Enko Clues icon"/>
+      </div>
+
+      <h1 class="hero-title">ENKO</h1>
+      <div class="hero-subtitle">Clues</div>
+
+      <p class="hero-tagline">
+        <em>Six cryptic clues.</em> One answer.<br/>
+        You know all the answers.
+      </p>
+
+      <a href="https://play.google.com/store/apps/details?id=com.ygar.app.enko" class="btn-play" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.18 23.76a2 2 0 0 0 2.04-.15l11.62-6.72-2.6-2.6L3.18 23.76zm17.3-11.53L17.7 10.6 14.9 13.4l2.8 2.8 2.78-1.6a1.53 1.53 0 0 0 0-2.37zM3.05.24A1.5 1.5 0 0 0 2 1.64v20.72a1.5 1.5 0 0 0 1.05 1.4l12.17-12.17L3.05.24zm11.85 10.84L5.22.39l11.62 6.72-2.94 2.97z"/>
+        </svg>
+        Get it on Google Play
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <p class="section-label">The Game</p>
+    <h2 class="section-title">A riddle game with nothing to hide</h2>
+    <p class="section-body">
+      Every question hides a single answer — a person, a place, a work of art. You uncover it one clue at a time.
+      You start with two enigmatic riddles. No dates, no domain, no easy way in. Get it wrong, and a new clue is revealed.
+      The further you go, the easier it gets — but the fewer points you score.
+      The perfect round? Guessing with only the first two clues.
+    </p>
+
+    <div class="divider" style="justify-content: flex-start; margin-top: 2.5rem;">
+      <div class="divider-line"></div>
+      <div class="divider-dot"></div>
+      <div class="divider-line" style="width:40px;"></div>
+    </div>
+
+    <p class="section-body" style="margin-top: 1.5rem; font-style: italic;">
+      No account required. No ads. No interruptions. Just you, the clues, and the answer waiting to be found.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Crafted with care</h2>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <div class="feature-title">Progressive reveal</div>
+        <div class="feature-desc">Six clues per question, ordered from cryptic riddle to near-giveaway. The fewer you need, the higher your score.</div>
+      </div>
+
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <div class="feature-title">Three difficulty levels</div>
+        <div class="feature-desc">Easy, Medium, Hard — each with its own curated question set within every category.</div>
+      </div>
+
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>
+        </svg>
+        <div class="feature-title">Smart autocomplete</div>
+        <div class="feature-desc">Suggestions never reveal the category. No guessing by elimination — only real knowledge counts.</div>
+      </div>
+
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 20V10M12 20V4M6 20v-6"/>
+        </svg>
+        <div class="feature-title">Statistics dashboard</div>
+        <div class="feature-desc">Unlocked after 10 games: track your streak, solve rate, and average clues needed per answer.</div>
+      </div>
+
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <div class="feature-title">Fully bilingual</div>
+        <div class="feature-desc">Play in English or French. Every clue is crafted natively in both languages — no rough translations.</div>
+      </div>
+
+      <div class="feature-card">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <div class="feature-title">Cloud save</div>
+        <div class="feature-desc">Progress syncs across devices via Google Play Games. Optional — the game works fully offline.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories" id="categories">
+    <p class="section-label">Content</p>
+    <h2 class="section-title">Hundreds of handcrafted questions</h2>
+    <p class="section-body">
+      Questions span multiple themes, each with three difficulty tiers.
+      Every clue is written by hand — no generated content, no filler.
+    </p>
+
+    <div class="categories-list">
+      <span class="cat-chip">Classic</span>
+      <span class="cat-chip">80s Pop &amp; Rock</span>
+      <span class="cat-chip">2000s Pop &amp; Rock</span>
+      <span class="cat-chip">Metal</span>
+      <span class="cat-chip">Classical Music</span>
+      <span class="cat-chip">USA</span>
+      <span class="cat-chip">Europe</span>
+      <span class="cat-chip">France</span>
+      <span class="cat-chip">Attack on Titan</span>
+      <span class="cat-chip">Demon Slayer</span>
+      <span class="cat-chip">Fullmetal Alchemist</span>
+      <span class="cat-chip">One Piece</span>
+    </div>
+  </section>
+
+  <!-- DESIGN -->
+  <section class="design" id="design">
+    <p class="section-label">Design</p>
+    <h2 class="section-title">A classic, retro aesthetic</h2>
+
+    <div class="design-inner">
+      <div>
+        <p class="section-body">
+          Dark blues fading into deep purple, serif typography, vintage editorial layout.
+          No flashy animations, no dopamine traps. The interface gets out of the way so you can think.
+        </p>
+        <div class="palette">
+          <div class="swatch" style="background:#050D1F;" title="#050D1F"></div>
+          <div class="swatch" style="background:#0D1330;" title="#0D1330"></div>
+          <div class="swatch" style="background:#1A0D2E;" title="#1A0D2E"></div>
+          <div class="swatch" style="background:#2D1A4A;" title="#2D1A4A"></div>
+          <div class="swatch" style="background:#7C3AED;" title="#7C3AED"></div>
+          <div class="swatch" style="background:#818CF8;" title="#818CF8"></div>
+          <div class="swatch" style="background:#9CA3AF;" title="#9CA3AF"></div>
+          <div class="swatch" style="background:#FFFFFF;" title="#FFFFFF"></div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
+        <div style="font-family:'Metamorphous',serif; font-size:1.6rem; letter-spacing:0.06em;">Metamorphous</div>
+        <div style="font-family:'Noto Serif',serif; font-style:italic; color:var(--text-secondary); font-size:1rem;">Noto Serif — body & clues</div>
+        <div style="font-family:'Noto Sans',sans-serif; font-size:0.9rem; color:var(--text-muted); letter-spacing:0.06em; text-transform:uppercase;">NOTO SANS — UI LABELS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/logo.svg" alt="Ygar Studio"/>
+        <span>Ygar Studio <span class="cuneiform">𒅗𒃻</span></span>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="mailto:nds.thomas@gmail.com">Contact</a></li>
+      </ul>
+
+      <p class="footer-copy">
+        &copy; 2026 Ygar Studio. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
