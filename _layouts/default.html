@@ -45,7 +45,7 @@
 
   <!-- NAV -->
   <nav class="{% if page.sticky_nav %}sticky{% else %}fixed{% endif %} inset-x-0 top-0 z-50 flex items-center justify-between px-6 h-16 border-b border-border bg-dark/90 backdrop-blur-md">
-    <a href="{{ lp }}/" class="flex items-center gap-3 no-underline">
+    <a href="{{ lp | append: '/' | relative_url }}" class="flex items-center gap-3 no-underline">
       <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Ygar Studio" class="w-8 h-auto"/>
       <div class="leading-none">
         <div class="font-script text-xl text-white leading-none">ygar</div>
@@ -55,9 +55,9 @@
     <div class="flex items-center gap-2">
       {% if site.active_lang == site.default_locale %}
         <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">EN</span>
-        <a href="/fr{{ page.url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
+        <a href="{{ '/fr' | append: page.url | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
       {% else %}
-        <a href="{{ page.url | remove_first: '/fr' }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
+        <a href="{{ page.url | remove_first: '/fr' | relative_url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
         <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">FR</span>
       {% endif %}
     </div>
@@ -74,8 +74,8 @@
         <span class="font-sans text-[10px] tracking-widest uppercase text-muted/40">Studio</span>
       </div>
       <nav class="flex flex-wrap justify-center gap-5">
-        <a href="{{ lp }}/" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t nav.home %}</a>
-        <a href="{{ lp }}/enko/" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Enko Clues</a>
+        <a href="{{ lp | append: '/' | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t nav.home %}</a>
+        <a href="{{ lp | append: '/enko/' | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Enko Clues</a>
         <a href="mailto:{{ site.email }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t global.contact %}</a>
       </nav>
       <p class="text-xs text-muted/30 tracking-wide">{% t global.copyright %}</p>

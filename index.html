@@ -33,7 +33,7 @@ sitemap:
   <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t home.games_label %}</p>
   <h2 class="font-display text-2xl tracking-wide mb-10">{% t home.games_title %}</h2>
 
-  <a href="{{ lp }}/enko/"
+  <a href="{{ lp | append: '/enko/' | relative_url }}"
      class="group flex items-center gap-6 p-6 rounded-xl border border-border bg-card hover:border-border-light transition-colors no-underline">
     <img src="{{ '/assets/enko-icon.svg' | relative_url }}" alt="Enko Clues" class="w-20 h-20 rounded-2xl flex-shrink-0"/>
     <div class="flex-1 min-w-0">
