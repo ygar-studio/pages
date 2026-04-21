@@ -3,6 +3,9 @@
 Thumbs.db
 desktop.ini
 
+# Claude Code local config
+.claude/
+
 # IDE
 .idea/
 *.iml
@@ -12,6 +15,8 @@ desktop.ini
 _site/
 .jekyll-cache/
 .jekyll-metadata
+.bundle/
+vendor/
 
 # Node (if tooling added later)
 node_modules/

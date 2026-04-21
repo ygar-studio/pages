@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ site.active_lang }}">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% if page.title %}{{ page.title }} — {% endif %}Ygar Studio</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/logo.svg' | relative_url }}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Metamorphous&family=Noto+Sans:wght@400;500&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            script:  ['"Macondo Swash Caps"', 'cursive'],
+            display: ['Metamorphous', 'serif'],
+            serif:   ['"Noto Serif"', 'Georgia', 'serif'],
+            sans:    ['"Noto Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            dark:           '#050D1F',
+            card:           '#0D1330',
+            accent:         '#7C3AED',
+            'accent-light': '#818CF8',
+            border:         '#2D1A4A',
+            'border-light': '#3D2A5A',
+            muted:          '#9CA3AF',
+          },
+        }
+      }
+    }
+  </script>
+  <style>body { background-color: #050D1F; }</style>
+</head>
+<body class="text-white font-sans min-h-screen">
+
+  {% comment %}Language-aware base path: "" for EN, "/fr" for FR{% endcomment %}
+  {% if site.active_lang == site.default_locale %}
+    {% assign lp = "" %}
+  {% else %}
+    {% assign lp = "/" | append: site.active_lang %}
+  {% endif %}
+
+  <!-- NAV -->
+  <nav class="{% if page.sticky_nav %}sticky{% else %}fixed{% endif %} inset-x-0 top-0 z-50 flex items-center justify-between px-6 h-16 border-b border-border bg-dark/90 backdrop-blur-md">
+    <a href="{{ lp }}/" class="flex items-center gap-3 no-underline">
+      <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Ygar Studio" class="w-8 h-auto"/>
+      <div class="leading-none">
+        <div class="font-script text-xl text-white leading-none">ygar</div>
+        <div class="font-sans text-[9px] tracking-[0.2em] uppercase text-muted mt-0.5">Studio</div>
+      </div>
+    </a>
+    <div class="flex items-center gap-2">
+      {% if site.active_lang == site.default_locale %}
+        <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">EN</span>
+        <a href="/fr{{ page.url }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">FR</a>
+      {% else %}
+        <a href="{{ page.url | remove_first: '/fr' }}" class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-border-light text-muted hover:text-white transition-colors">EN</a>
+        <span class="text-xs tracking-widest uppercase px-3 py-1.5 rounded border border-accent text-white">FR</span>
+      {% endif %}
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <!-- FOOTER -->
+  <footer class="border-t border-border py-10 px-6">
+    <div class="max-w-4xl mx-auto flex flex-col items-center gap-4">
+      <div class="flex items-center gap-2">
+        <img src="{{ '/assets/logo.svg' | relative_url }}" alt="" class="w-6 h-auto opacity-60"/>
+        <span class="font-script text-base text-muted/70">ygar</span>
+        <span class="font-sans text-[10px] tracking-widest uppercase text-muted/40">Studio</span>
+      </div>
+      <nav class="flex flex-wrap justify-center gap-5">
+        <a href="{{ lp }}/" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t nav.home %}</a>
+        <a href="{{ lp }}/enko/" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Enko Clues</a>
+        <a href="mailto:{{ site.email }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t global.contact %}</a>
+      </nav>
+      <p class="text-xs text-muted/30 tracking-wide">{% t global.copyright %}</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+global:
+  lang_en: "EN"
+  lang_fr: "FR"
+  contact: "Contact"
+  back: "← Back"
+  copyright: "© 2026 Ygar Studio. All rights reserved."
+
+nav:
+  home: "Home"
+  privacy: "Privacy Policy"
+
+home:
+  tagline: "Games for the curious."
+  games_label: "Our Games"
+  games_title: "Available now"
+  enko_short: "Six cryptic clues. One answer. Can you guess it before running out of hints?"
+  enko_cta: "Discover →"
+
+enko:
+  page_title: "Enko Clues"
+  tagline1: "Six cryptic clues. One answer."
+  tagline2: "You know all the answers."
+  cta: "Get it on Google Play"
+  screenshots_label: "Screenshots"
+  about_label: "About"
+  about_title: "A riddle game with nothing to hide"
+  about_body1: >
+    Every question hides a single answer — a person, a place, a work of art.
+    You uncover it one clue at a time. Start with two enigmatic riddles:
+    no dates, no domain, no easy way in. Get it wrong and a new clue is revealed.
+    The further you go, the easier it gets — but the fewer points you score.
+  about_body2: "No account required. No ads. No interruptions."
+  feat_label: "Features"
+  feat_title: "Crafted with care"
+  feat1_title: "Progressive reveal"
+  feat1_body: "Six clues per question, from cryptic to near-giveaway. Fewer clues = higher score."
+  feat2_title: "Three difficulty levels"
+  feat2_body: "Easy, Medium, Hard — each with its own curated question set."
+  feat3_title: "Smart autocomplete"
+  feat3_body: "Suggestions never reveal the category. Only real knowledge counts."
+  feat4_title: "Statistics dashboard"
+  feat4_body: "Unlocked after 10 games: streak, solve rate, average clues needed."
+  feat5_title: "Fully bilingual"
+  feat5_body: "English and French, every clue crafted natively in both languages."
+  feat6_title: "Cloud save (optional)"
+  feat6_body: "Sync progress across devices via Google Play Games. Works fully offline without it."
+  cat_label: "Content"
+  cat_title: "Hundreds of handcrafted questions"
+  footer_home: "Home"
+  footer_privacy: "Privacy Policy"
+
+privacy:
+  label: "Legal"
+  title: "Privacy Policy"
+  meta: "Enko Clues — Ygar Studio — Last updated: April 2026"
+  intro: >
+    Enko Clues is designed to respect your privacy.
+    The app works fully offline, collects no personal data, and contains no advertising.
+  s1_title: "1. Who we are"
+  s1_body: >
+    Enko Clues is published by Ygar Studio, an independent developer.
+    For any privacy-related question, contact us at
+  s2_title: "2. Data we do not collect"
+  s2_intro: "Ygar Studio does not collect, store, or share any of the following:"
+  s2_li1: "Personal identity information (name, email, phone number)"
+  s2_li2: "Location data"
+  s2_li3: "Device identifiers or advertising IDs"
+  s2_li4: "Usage analytics or crash reports sent to our servers"
+  s2_li5: "In-app behaviour or gameplay telemetry"
+  s3_title: "3. Data stored on your device"
+  s3_body: >
+    The app stores your game progress, statistics, and settings
+    <strong class="text-white font-semibold">exclusively on your device</strong>
+    via Android local storage. This data never leaves your device unless you enable cloud save.
+  s4_title: "4. Google Play Games (optional cloud save)"
+  s4_body1: >
+    Enko Clues optionally integrates Google Play Games Services to back up and sync your
+    progress across devices. This feature is
+    <strong class="text-white font-semibold">entirely optional</strong> — the app works fully without it.
+  s4_body2: >
+    When enabled, your game data is transmitted to Google's servers under their own privacy terms.
+    Ygar Studio has no access to your Google account or any data Google stores.
+  s4_body3: "See the"
+  s4_google_link: "Google Privacy Policy"
+  s4_body3_end: "for details."
+  s5_title: "5. Internet permission"
+  s5_body: >
+    The <code class="bg-card px-1.5 py-0.5 rounded text-xs">INTERNET</code> permission is
+    requested solely for optional communication with Google Play Games.
+    It is <strong class="text-white font-semibold">not used</strong> to collect data,
+    display advertising, or contact any Ygar Studio server.
+  s6_title: "6. Children's privacy"
+  s6_body: "Enko Clues does not knowingly collect data from children under 13. The app displays no advertising and requires no account."
+  s7_title: "7. Third-party services"
+  s7_li1: "<strong class=\"text-white font-semibold\">Google Play Games Services</strong> (optional) — cross-device cloud save only."
+  s7_body: "No analytics SDKs, advertising networks, or crash-reporting services are embedded in the app."
+  s8_title: "8. Changes to this policy"
+  s8_body: "We may update this policy from time to time. Changes will be posted here with an updated date."
+  s9_title: "9. Contact"

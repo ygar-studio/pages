@@ -1,21 +1,35 @@
 # Ygar Studio — GitHub Pages
 
 Static GitHub Pages site for **Ygar Studio**, an independent Android game studio.
-Published at: `https://<username>.github.io/<repo>/` (configure in repo Settings → Pages → branch `master`, root `/`).
+Published at: `https://<username>.github.io/<repo>/` (configure in repo Settings → Pages → Source: GitHub Actions).
 
 ## Project structure
 
 ```
 teststdy/
-├── index.html           # Landing page (studio + Enko Clues)
-├── privacy-policy.html  # Bilingual privacy policy (EN / FR, JS toggle)
+├── index.html                        # Studio landing page only (EN/FR toggle)
+├── enko/
+│   ├── index.html                    # Enko Clues app page (screenshots, features, categories)
+│   └── privacy-policy.html           # Bilingual privacy policy (EN/FR toggle)
 ├── assets/
-│   ├── logo.svg         # Ygar Studio tablet logo (3D purple extrusion)
-│   └── enko-icon.svg    # Enko Clues app icon (globe with grid lines)
-├── .nojekyll            # Disables Jekyll, serves plain HTML
+│   ├── logo.svg                      # Ygar Studio tablet logo (3D purple extrusion)
+│   ├── enko-icon.svg                 # Enko Clues app icon (globe with grid lines)
+│   └── enko/
+│       ├── icon.png                  # App store icon (copied from enko/store/)
+│       └── screenshots/1–4.jpg       # Store screenshots (copied from enko/store/)
+├── .github/workflows/deploy.yml      # GitHub Pages Actions deploy
+├── .nojekyll
 ├── .gitignore
 └── CLAUDE.md
 ```
+
+## Conventions
+
+- Each app gets its own subfolder (`enko/`, future apps follow the same pattern).
+- All pages use **Tailwind CSS CDN** with a shared custom config (colors + font families).
+- **Fonts** (Google Fonts): Macondo Swash Caps (studio wordmark "ygar"), Metamorphous (headings), Noto Serif (body), Noto Sans (UI labels).
+- **Bilingual** EN/FR everywhere via JS toggle — `lang-hidden` CSS class, `setLang()` function.
+- Logo style: `font-script` ("ygar" in Macondo Swash Caps) + small-caps "Studio" label below, matching `ygar_studio_header.svg`.
 
 ## Source assets
 
@@ -31,23 +45,18 @@ All original assets live in **`C:\Users\Sesa725153\AndroidStudioProjects\enko`**
 | App description (EN) | `store/description_en.md` |
 | App description (FR) | `store/description_fr.md` |
 | Colors | `app/src/main/res/values/colors.xml` |
-| Fonts | `app/src/main/res/font/` |
 
-## Design system
-
-Mirrors the Enko app aesthetic exactly:
+## Design tokens (Tailwind config)
 
 | Token | Value |
 |---|---|
-| bg-dark | `#050D1F` |
-| bg-card | `#0D1330` |
-| bg-gradient-end | `#1A0D2E` |
+| dark | `#050D1F` |
+| card | `#0D1330` |
 | accent | `#7C3AED` |
 | accent-light | `#818CF8` |
-| text-secondary | `#9CA3AF` |
 | border | `#2D1A4A` |
-
-**Fonts** (Google Fonts): Metamorphous (headings), Noto Serif (body/clues), Noto Sans (UI labels).
+| border-light | `#3D2A5A` |
+| muted | `#9CA3AF` |
 
 ## App info
 
@@ -55,20 +64,11 @@ Mirrors the Enko app aesthetic exactly:
 - **Package**: `com.ygar.app.enko`
 - **Publisher**: Ygar Studio 𒅗𒃻
 - **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.enko`
-- **Version**: 1.0.1 (versionCode 2)
-- **Languages**: English & French (bilingual)
-
-## GitHub Pages setup
-
-1. Push to `master` (or `main`).
-2. Repo Settings → Pages → Source: branch `master`, folder `/` (root).
-3. `.nojekyll` is already present — no Jekyll processing, files served as-is.
-4. Optional: add a custom domain in Settings → Pages → Custom domain, then create a `CNAME` file at root.
+- **Contact**: ygar.studio@gmail.com
 
 ## Privacy policy
 
-- Single page `privacy-policy.html` with JS language toggle (EN/FR).
+- Lives at `enko/privacy-policy.html`.
+- Single page with JS EN/FR language toggle.
 - Covers: no data collection, local storage only, optional Google Play Games cloud save, INTERNET permission scope.
-- Contact: nds.thomas@gmail.com
-- Last updated: April 2026.
 - **Both languages must be kept in sync** when updating policy text.

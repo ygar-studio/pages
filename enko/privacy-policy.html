@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Privacy Policy — Enko Clues"
+sticky_nav: true
+sitemap:
+  priority: 0.5
+---
+
+<div class="max-w-2xl mx-auto px-6 py-12 pb-20">
+
+  <div class="mb-10 pb-8 border-b border-border">
+    <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t privacy.label %}</p>
+    <h1 class="font-display text-3xl tracking-wide mb-3">{% t privacy.title %}</h1>
+    <p class="text-xs text-muted/60 tracking-wide">{% t privacy.meta %}</p>
+  </div>
+
+  <div class="pl-4 border-l-2 border-accent bg-card rounded-r-lg py-3 px-4 mb-10">
+    <p class="font-serif text-sm text-muted leading-relaxed">{% t privacy.intro %}</p>
+  </div>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s1_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-6">
+    {% t privacy.s1_body %}
+    <a href="mailto:{{ site.email }}" class="text-accent-light hover:underline">{{ site.email }}</a>.
+  </p>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s2_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-2">{% t privacy.s2_intro %}</p>
+  <ul class="list-disc ml-5 mb-6 space-y-1">
+    {% assign li_keys = "s2_li1,s2_li2,s2_li3,s2_li4,s2_li5" | split: "," %}
+    {% for key in li_keys %}
+    <li class="font-serif text-sm text-muted">{% t privacy[key] %}</li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s3_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-6">{% t privacy.s3_body %}</p>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s4_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-3">{% t privacy.s4_body1 %}</p>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-3">{% t privacy.s4_body2 %}</p>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-6">
+    {% t privacy.s4_body3 %}
+    {% if site.active_lang == site.default_locale %}
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-accent-light hover:underline">{% t privacy.s4_google_link %}</a>
+    {% else %}
+      <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener" class="text-accent-light hover:underline">{% t privacy.s4_google_link %}</a>
+    {% endif %}
+    {% t privacy.s4_body3_end %}
+  </p>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s5_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-6">{% t privacy.s5_body %}</p>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s6_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-6">{% t privacy.s6_body %}</p>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s7_title %}</h2>
+  <ul class="list-disc ml-5 mb-4 space-y-1">
+    <li class="font-serif text-sm text-muted">{% t privacy.s7_li1 %}</li>
+  </ul>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-6">{% t privacy.s7_body %}</p>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s8_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed mb-6">{% t privacy.s8_body %}</p>
+
+  <h2 class="font-serif font-bold text-sm tracking-wide mt-8 mb-3">{% t privacy.s9_title %}</h2>
+  <p class="font-serif text-sm text-muted leading-relaxed">
+    <a href="mailto:{{ site.email }}" class="text-accent-light hover:underline">{{ site.email }}</a>
+  </p>
+
+</div>

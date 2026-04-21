@@ -1,0 +1,105 @@
+global:
+  lang_en: "EN"
+  lang_fr: "FR"
+  contact: "Contact"
+  back: "← Retour"
+  copyright: "© 2026 Ygar Studio. Tous droits réservés."
+
+nav:
+  home: "Accueil"
+  privacy: "Politique de confidentialité"
+
+home:
+  tagline: "Des jeux pour les curieux."
+  games_label: "Nos Jeux"
+  games_title: "Disponible maintenant"
+  enko_short: "Six indices énigmatiques. Une réponse. Trouverez-vous avant la fin des indices ?"
+  enko_cta: "Découvrir →"
+
+enko:
+  page_title: "Enko Clues"
+  tagline1: "Six indices énigmatiques. Une réponse."
+  tagline2: "Vous connaissez toutes les réponses."
+  cta: "Disponible sur Google Play"
+  screenshots_label: "Captures d'écran"
+  about_label: "À propos"
+  about_title: "Un jeu d'énigmes sans filtre"
+  about_body1: >
+    Chaque question cache une seule réponse — une personne, un lieu, une œuvre.
+    Vous la découvrez un indice à la fois. Vous commencez avec deux énigmes cryptiques :
+    pas de dates, pas de domaine, aucune porte d'entrée facile.
+    Une mauvaise réponse, et un nouvel indice se révèle.
+    Plus vous avancez, plus c'est simple — mais moins vous marquez.
+  about_body2: "Pas de compte, pas de publicité, pas d'interruption."
+  feat_label: "Fonctionnalités"
+  feat_title: "Conçu avec soin"
+  feat1_title: "Révélation progressive"
+  feat1_body: "Six indices par question, du plus cryptique au quasi-évident. Moins d'indices = plus de points."
+  feat2_title: "Trois niveaux de difficulté"
+  feat2_body: "Facile, Moyen, Difficile — chacun avec son propre ensemble de questions."
+  feat3_title: "Autocomplétion intelligente"
+  feat3_body: "Les suggestions ne trahissent jamais la catégorie. Seule la vraie connaissance compte."
+  feat4_title: "Tableau de statistiques"
+  feat4_body: "Débloqué après 10 parties : série, taux de réussite, indices moyens utilisés."
+  feat5_title: "Entièrement bilingue"
+  feat5_body: "Anglais et français, chaque indice écrit nativement dans les deux langues."
+  feat6_title: "Sauvegarde cloud (optionnelle)"
+  feat6_body: "Synchronisez votre progression via Google Play Games. Fonctionne hors ligne sans elle."
+  cat_label: "Contenu"
+  cat_title: "Des centaines de questions écrites à la main"
+  footer_home: "Accueil"
+  footer_privacy: "Politique de confidentialité"
+
+privacy:
+  label: "Légal"
+  title: "Politique de confidentialité"
+  meta: "Enko Clues — Ygar Studio — Dernière mise à jour : avril 2026"
+  intro: >
+    Enko Clues est conçu dans le respect de votre vie privée.
+    L'application fonctionne entièrement hors ligne, ne collecte aucune donnée personnelle
+    et ne contient aucune publicité.
+  s1_title: "1. Qui sommes-nous"
+  s1_body: >
+    Enko Clues est publié par Ygar Studio, un développeur indépendant.
+    Pour toute question relative à la confidentialité, contactez-nous à
+  s2_title: "2. Données que nous ne collectons pas"
+  s2_intro: "Ygar Studio ne collecte, ne stocke et ne partage aucune des données suivantes :"
+  s2_li1: "Informations d'identité personnelle (nom, e-mail, numéro de téléphone)"
+  s2_li2: "Données de localisation"
+  s2_li3: "Identifiants d'appareil ou identifiants publicitaires"
+  s2_li4: "Statistiques d'utilisation ou rapports de plantage envoyés à nos serveurs"
+  s2_li5: "Comportements en jeu ou télémétrie"
+  s3_title: "3. Données stockées sur votre appareil"
+  s3_body: >
+    L'application enregistre votre progression, vos statistiques et vos paramètres
+    <strong class="text-white font-semibold">exclusivement sur votre appareil</strong>
+    via le stockage local Android. Ces données ne quittent jamais votre appareil,
+    sauf si vous activez la sauvegarde cloud.
+  s4_title: "4. Google Play Games (sauvegarde cloud optionnelle)"
+  s4_body1: >
+    Enko Clues s'intègre de manière optionnelle aux services Google Play Games pour
+    sauvegarder et synchroniser votre progression sur plusieurs appareils.
+    Cette fonctionnalité est
+    <strong class="text-white font-semibold">entièrement facultative</strong>
+    — l'application fonctionne intégralement sans elle.
+  s4_body2: >
+    Lorsqu'elle est activée, vos données de jeu sont transmises aux serveurs de Google
+    selon leurs propres conditions. Ygar Studio n'a aucun accès à votre compte Google
+    ni aux données que Google conserve.
+  s4_body3: "Consultez la"
+  s4_google_link: "Politique de confidentialité Google"
+  s4_body3_end: "pour plus de détails."
+  s5_title: "5. Permission Internet"
+  s5_body: >
+    La permission <code class="bg-card px-1.5 py-0.5 rounded text-xs">INTERNET</code>
+    est demandée uniquement pour la communication optionnelle avec Google Play Games.
+    Elle <strong class="text-white font-semibold">n'est pas utilisée</strong> pour
+    collecter des données, afficher de la publicité ou contacter un serveur Ygar Studio.
+  s6_title: "6. Protection des mineurs"
+  s6_body: "Enko Clues ne collecte sciemment aucune donnée d'enfants de moins de 13 ans. L'application n'affiche pas de publicité et ne requiert pas de création de compte."
+  s7_title: "7. Services tiers"
+  s7_li1: "<strong class=\"text-white font-semibold\">Google Play Games Services</strong> (optionnel) — sauvegarde cloud multi-appareils uniquement."
+  s7_body: "Aucun SDK d'analyse, réseau publicitaire ou service de rapport de plantage n'est intégré dans l'application."
+  s8_title: "8. Modifications"
+  s8_body: "Nous pouvons mettre à jour cette politique. Les modifications seront publiées sur cette page avec une date de mise à jour."
+  s9_title: "9. Contact"

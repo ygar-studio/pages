@@ -1,0 +1,32 @@
+title: Ygar Studio
+description: Independent mobile game studio. Games for the curious.
+url: "https://ygar-studio.github.io"
+baseurl: ""
+email: ygar.studio@gmail.com
+
+plugins:
+  - jekyll-multiple-languages-plugin
+  - jekyll-sitemap
+
+languages:
+  - en
+  - fr
+default_locale: en
+exclude_from_localizations:
+  - assets
+  - .github
+  - Gemfile
+  - Gemfile.lock
+  - CLAUDE.md
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CLAUDE.md
+  - .claude/
+  - .idea/
+  - vendor/
+  - .bundle/
+
+sass:
+  style: compressed

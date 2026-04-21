@@ -1,0 +1,99 @@
+---
+layout: default
+title: "Enko Clues"
+description: "Six cryptic clues. One answer. Can you guess it before running out of hints?"
+sticky_nav: true
+sitemap:
+  priority: 0.9
+---
+{% if site.active_lang == site.default_locale %}{% assign lp = "" %}{% else %}{% assign lp = "/" | append: site.active_lang %}{% endif %}
+
+<!-- HERO -->
+<header class="relative flex flex-col items-center justify-center px-6 py-24 overflow-hidden text-center"
+        style="background: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(124,58,237,0.18) 0%, transparent 70%), linear-gradient(180deg,#050D1F 0%,#0A1128 60%,#1A0D2E 100%)">
+
+  <div class="absolute top-6 left-6 w-16 h-16 border-t border-l border-muted/20 pointer-events-none"></div>
+  <div class="absolute bottom-6 right-6 w-16 h-16 border-b border-r border-muted/20 pointer-events-none"></div>
+
+  <div class="relative mb-8">
+    <div class="absolute inset-0 scale-150 rounded-full blur-2xl opacity-30" style="background:radial-gradient(circle,#7C3AED,transparent)"></div>
+    <img src="{{ '/assets/enko-icon.svg' | relative_url }}" alt="Enko Clues" class="relative w-24 h-24 rounded-3xl"/>
+  </div>
+
+  <h1 class="font-display text-6xl tracking-[0.1em] mb-2">ENKO</h1>
+  <div class="font-serif italic text-3xl tracking-[0.15em] text-muted mb-6">Clues</div>
+
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-16 h-px bg-muted/30"></div>
+    <div class="w-1.5 h-1.5 rounded-full bg-muted/60"></div>
+    <div class="w-16 h-px bg-muted/30"></div>
+  </div>
+
+  <p class="font-serif text-muted text-lg max-w-sm mb-2">{% t enko.tagline1 %}</p>
+  <p class="font-serif text-white text-lg max-w-sm mb-8">{% t enko.tagline2 %}</p>
+
+  <a href="https://play.google.com/store/apps/details?id=com.ygar.app.enko"
+     target="_blank" rel="noopener"
+     class="inline-flex items-center gap-3 px-6 py-3.5 border border-accent rounded hover:bg-accent/10 transition-colors">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M3.18 23.76a2 2 0 0 0 2.04-.15l11.62-6.72-2.6-2.6L3.18 23.76zm17.3-11.53L17.7 10.6 14.9 13.4l2.8 2.8 2.78-1.6a1.53 1.53 0 0 0 0-2.37zM3.05.24A1.5 1.5 0 0 0 2 1.64v20.72a1.5 1.5 0 0 0 1.05 1.4l12.17-12.17L3.05.24zm11.85 10.84L5.22.39l11.62 6.72-2.94 2.97z"/>
+    </svg>
+    <span class="font-sans text-sm tracking-[0.08em] uppercase">{% t enko.cta %}</span>
+  </a>
+
+</header>
+
+<!-- SCREENSHOTS -->
+<section class="py-16 border-t border-border">
+  <div class="max-w-4xl mx-auto px-6 mb-6">
+    <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light">{% t enko.screenshots_label %}</p>
+  </div>
+  <div class="flex gap-4 px-6 overflow-x-auto pb-2 max-w-4xl mx-auto" style="scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+    <img src="{{ '/assets/enko/screenshots/1.jpg' | relative_url }}" alt="" class="h-[480px] w-auto rounded-2xl border border-border flex-shrink-0" style="scroll-snap-align:start"/>
+    <img src="{{ '/assets/enko/screenshots/2.jpg' | relative_url }}" alt="" class="h-[480px] w-auto rounded-2xl border border-border flex-shrink-0" style="scroll-snap-align:start"/>
+    <img src="{{ '/assets/enko/screenshots/3.jpg' | relative_url }}" alt="" class="h-[480px] w-auto rounded-2xl border border-border flex-shrink-0" style="scroll-snap-align:start"/>
+    <img src="{{ '/assets/enko/screenshots/4.jpg' | relative_url }}" alt="" class="h-[480px] w-auto rounded-2xl border border-border flex-shrink-0" style="scroll-snap-align:start"/>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="max-w-4xl mx-auto px-6 py-16 border-t border-border">
+  <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t enko.about_label %}</p>
+  <h2 class="font-display text-2xl tracking-wide mb-6">{% t enko.about_title %}</h2>
+  <p class="font-serif text-muted leading-relaxed mb-4">{% t enko.about_body1 %}</p>
+  <p class="font-serif text-muted leading-relaxed italic">{% t enko.about_body2 %}</p>
+</section>
+
+<!-- FEATURES -->
+<section class="max-w-4xl mx-auto px-6 py-16 border-t border-border">
+  <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t enko.feat_label %}</p>
+  <h2 class="font-display text-2xl tracking-wide mb-8">{% t enko.feat_title %}</h2>
+  <ul class="grid sm:grid-cols-2 gap-4">
+    {% assign feat_keys = "feat1,feat2,feat3,feat4,feat5,feat6" | split: "," %}
+    {% for key in feat_keys %}
+    <li class="p-5 rounded-xl border border-border bg-card">
+      <div class="font-serif font-bold text-sm mb-1">{% t enko[key | append: "_title"] %}</div>
+      <div class="text-xs text-muted leading-relaxed">{% t enko[key | append: "_body"] %}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- CATEGORIES -->
+<section class="max-w-4xl mx-auto px-6 py-16 border-t border-border">
+  <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t enko.cat_label %}</p>
+  <h2 class="font-display text-2xl tracking-wide mb-6">{% t enko.cat_title %}</h2>
+  <div class="flex flex-wrap gap-2">
+    {% assign cats = "Classic,80s Pop & Rock,2000s Pop & Rock,Metal,Classical Music,USA,Europe,France,Attack on Titan,Demon Slayer,Fullmetal Alchemist,One Piece" | split: "," %}
+    {% for cat in cats %}
+    <span class="px-3 py-1.5 text-xs tracking-wide text-muted border border-border-light rounded bg-card">{{ cat }}</span>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- PRIVACY LINK -->
+<section class="max-w-4xl mx-auto px-6 py-10 border-t border-border">
+  <a href="{{ lp }}/enko/privacy-policy/" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">
+    {% t nav.privacy %} →
+  </a>
+</section>
