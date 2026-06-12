@@ -3,6 +3,7 @@ global:
   lang_fr: "FR"
   contact: "Contact"
   back: "← Back"
+  back_home: "← Home"
   copyright: "© 2026 Ygar Studio. All rights reserved."
 
 nav:
@@ -143,7 +144,7 @@ igi_privacy:
   s3_title: "3. Data stored on your device"
   s3_body: >
     The game stores player profiles, statistics, and settings
-    <strong class="text-white font-semibold">exclusively on your device</strong>
+    <strong class="font-semibold" style="color:#2A1F18">exclusively on your device</strong>
     via Android local storage. This data never leaves your device.
   s4_title: "4. No network access"
   s4_body: >

@@ -9,7 +9,11 @@ lang_en: /enko/privacy-policy/
 lang_fr: /fr/enko/privacy-policy/
 ---
 
+{% if site.lang == "fr" %}{% assign enko_url = "/fr/enko/" %}{% else %}{% assign enko_url = "/enko/" %}{% endif %}
+
 <div class="max-w-2xl mx-auto px-6 py-12 pb-20">
+
+  <a href="{{ enko_url | relative_url }}" class="inline-block mb-8 text-xs tracking-wide text-muted/60 hover:text-white transition-colors">{% t global.back %}</a>
 
   <div class="mb-10 pb-8 border-b border-border">
     <p class="text-[11px] tracking-[0.22em] uppercase text-accent-light mb-3">{% t privacy.label %}</p>

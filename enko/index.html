@@ -29,10 +29,15 @@ lang_fr: /fr/enko/
   }
 }
 </script>
-{% if site.lang == "fr" %}{% assign privacy_url = "/fr/enko/privacy-policy/" %}{% else %}{% assign privacy_url = "/enko/privacy-policy/" %}{% endif %}
+{% if site.lang == "fr" %}{% assign privacy_url = "/fr/enko/privacy-policy/" %}{% assign home_url = "/fr/" %}{% else %}{% assign privacy_url = "/enko/privacy-policy/" %}{% assign home_url = "/" %}{% endif %}
+
+<!-- BACK TO HOME -->
+<div class="max-w-4xl mx-auto px-6 pt-6">
+  <a href="{{ home_url | relative_url }}" class="text-xs tracking-wide text-muted/60 hover:text-white transition-colors">{% t global.back_home %}</a>
+</div>
 
 <!-- HERO -->
-<header class="relative flex flex-col items-center justify-center px-6 py-24 overflow-hidden text-center"
+<header class="relative flex flex-col items-center justify-center px-6 pt-10 pb-24 overflow-hidden text-center"
         style="background: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(124,58,237,0.18) 0%, transparent 70%), linear-gradient(180deg,#050D1F 0%,#0A1128 60%,#1A0D2E 100%)">
 
   <div class="absolute top-6 left-6 w-16 h-16 border-t border-l border-muted/20 pointer-events-none"></div>

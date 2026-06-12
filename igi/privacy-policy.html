@@ -18,8 +18,12 @@ lang_fr: /fr/igi/privacy-policy/
   .igi code { background:#222C44; color:#F1DEBD; }
 </style>
 
+{% if site.lang == "fr" %}{% assign igi_url = "/fr/igi/" %}{% else %}{% assign igi_url = "/igi/" %}{% endif %}
+
 <div class="igi">
   <div class="max-w-2xl mx-auto px-6 py-12 pb-20">
+
+    <a href="{{ igi_url | relative_url }}" class="inline-block mb-8 text-xs tracking-wide gold hover:underline">{% t global.back %}</a>
 
     <div class="mb-10 pb-8" style="border-bottom:1px solid rgba(143,111,42,0.3)">
       <p class="igi-title text-[12px] tracking-[0.22em] uppercase mb-3" style="color:#8F6F2A">{% t igi_privacy.label %}</p>

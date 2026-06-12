@@ -43,6 +43,10 @@ lang_fr: /fr/
     position:absolute; border-radius:50%; pointer-events:none; z-index:1;
     will-change: transform, opacity;
   }
+
+  /* Game cards share one identity: gold border on hover for every app. */
+  .game-card { transition: border-color .2s, transform .2s; }
+  .game-card:hover { border-color:#C9A24B; transform: translateY(-2px); }
 </style>
 
 <!-- HERO -->
@@ -69,12 +73,12 @@ lang_fr: /fr/
   <div class="ygar-glyph text-xl" style="top:78%;left:14%;animation-delay:4s">𒉌</div>
   <div class="ygar-glyph text-2xl" style="top:28%;left:78%;animation-delay:6s">𒈨</div>
 
-  <div class="relative z-10 flex items-center justify-center gap-8 mb-8">
-    <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Ygar Studio" class="h-32 w-auto flex-shrink-0"/>
+  <div class="relative z-10 flex items-center justify-center gap-5 sm:gap-8 lg:gap-12 mb-8">
+    <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Ygar Studio" class="h-24 sm:h-36 lg:h-48 w-auto flex-shrink-0"/>
     <div class="text-left">
-      <div class="font-script text-[5.5rem] leading-none" style="font-family:'Macondo Swash Caps',cursive;color:#D4A947;text-shadow:2px 2px 0 rgba(255,255,255,0.3)">Ygar</div>
-      <div class="font-serif text-lg tracking-[0.4em] uppercase text-white mt-3">Studio</div>
-      <div class="text-muted/40 text-base tracking-widest mt-1" style="font-family:'Noto Sans','Segoe UI Historic',sans-serif">𒅗 𒃻</div>
+      <div class="font-script text-[3.75rem] sm:text-[6rem] lg:text-[8.25rem] leading-none" style="font-family:'Macondo Swash Caps',cursive;color:#D4A947;text-shadow:3px 3px 0 rgba(255,255,255,0.3)">Ygar</div>
+      <div class="font-serif text-sm sm:text-xl lg:text-[1.7rem] tracking-[0.4em] uppercase text-white mt-2 sm:mt-3 lg:mt-4">Studio</div>
+      <div class="text-muted/40 text-lg sm:text-xl lg:text-2xl tracking-widest mt-1 sm:mt-2" style="font-family:'Noto Sans','Segoe UI Historic',sans-serif">𒅗 𒃻</div>
     </div>
   </div>
 
@@ -204,7 +208,7 @@ lang_fr: /fr/
   <div class="grid gap-5 sm:grid-cols-2">
 
     <a href="{{ enko_url | relative_url }}"
-       class="group flex flex-col gap-4 p-6 rounded-xl border border-border bg-card hover:border-border-light transition-colors no-underline">
+       class="game-card group flex flex-col gap-4 p-6 rounded-xl border border-border bg-card no-underline">
       <img src="{{ '/assets/enko-icon.svg' | relative_url }}" alt="Enko Clues" class="w-20 h-20 rounded-2xl flex-shrink-0"/>
       <div class="flex-1 min-w-0">
         <div class="font-display text-xl tracking-wide text-white mb-1">Enko Clues</div>
@@ -216,8 +220,7 @@ lang_fr: /fr/
     </a>
 
     <a href="{{ igi_url | relative_url }}"
-       class="group flex flex-col gap-4 p-6 rounded-xl border border-border bg-card transition-colors no-underline"
-       onmouseover="this.style.borderColor='#C9A24B'" onmouseout="this.style.borderColor=''">
+       class="game-card group flex flex-col gap-4 p-6 rounded-xl border border-border bg-card no-underline">
       <img src="{{ '/assets/igi-icon.svg' | relative_url }}" alt="Igi" class="w-20 h-20 rounded-2xl flex-shrink-0"/>
       <div class="flex-1 min-w-0">
         <div class="font-display text-xl tracking-wide text-white mb-1">Igi</div>
