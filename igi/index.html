@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Igi — Find the Words"
-description: "One word per turn to reveal the secret. A pass-and-play word party game for 2 to 8 players."
+description: "One word per turn to reveal the secret. A pass-and-play word party game for 2 to 14 players."
 sticky_nav: true
 sitemap:
   priority: 0.9
@@ -20,7 +20,7 @@ lang_fr: /fr/igi/
     "price": "0",
     "priceCurrency": "USD"
   },
-  "description": "A pass-and-play word-association party game for 2 to 8 players.",
+  "description": "A pass-and-play word-association party game for 2 to 14 players.",
   "url": "{{ site.url }}{{ site.baseurl }}/igi/",
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.ygar.app.igi",
   "publisher": {
@@ -31,77 +31,100 @@ lang_fr: /fr/igi/
 </script>
 {% if site.lang == "fr" %}{% assign privacy_url = "/fr/igi/privacy-policy/" %}{% else %}{% assign privacy_url = "/igi/privacy-policy/" %}{% endif %}
 
-<!-- HERO -->
-<header class="relative flex flex-col items-center justify-center px-6 py-24 overflow-hidden text-center"
-        style="background: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(201,162,75,0.16) 0%, transparent 70%), linear-gradient(180deg,#050D1F 0%,#0A1128 60%,#1A0D2E 100%)">
+{% comment %}
+  Igi carries its OWN identity (see app DESIGN.md): cream parchment page + slate/gold chrome,
+  ink-sepia text, Metamorphous titles + Noto Sans body (no Noto Serif — banned in the app),
+  joker-hat mascot, harlequin-diamond accents, jewel hues. This deliberately diverges from
+  Enko's dark-lapis/purple page so each app's page feels like its own product.
+{% endcomment %}
+<style>
+  .igi { background: linear-gradient(180deg,#F5EBD6 0%,#E8D9B8 55%,#C9B084 100%); color:#4A3A2E; }
+  .igi .ink-900 { color:#2A1F18; } .igi .ink-700 { color:#4A3A2E; } .igi .ink-500 { color:#7A6755; }
+  .igi-title { font-family:'Metamorphous',serif; }
+  /* Gilded stone-seal CTA — gold frame over warm metal, cream label (mirrors the app's primary button) */
+  .igi-cta { background:linear-gradient(180deg,#E6CB85 0%,#C9A24B 55%,#8F6F2A 100%); color:#2A1F18;
+             border:1px solid #8F6F2A; box-shadow:0 2px 0 rgba(70,45,12,0.35), inset 0 1px 0 rgba(255,255,255,0.35); }
+  .igi-cta:hover { filter:brightness(1.06); }
+  /* Slate chrome panel — cream text, gold filigree border (the app's card recipe) */
+  .igi-panel { background:linear-gradient(180deg,#222C44 0%,#1A2237 100%); border:1px solid #C9A24B; }
+  /* Harlequin-diamond divider */
+  .igi-diamond { width:10px; height:10px; transform:rotate(45deg); background:#C9A24B; border:1px solid #8F6F2A; }
+  .igi-rule { height:1px; width:64px; background:rgba(143,111,42,0.5); }
+</style>
 
-  <div class="absolute top-6 left-6 w-16 h-16 border-t border-l border-muted/20 pointer-events-none"></div>
-  <div class="absolute bottom-6 right-6 w-16 h-16 border-b border-r border-muted/20 pointer-events-none"></div>
+<div class="igi">
 
-  <div class="relative mb-8">
-    <div class="absolute inset-0 scale-150 rounded-full blur-2xl opacity-30" style="background:radial-gradient(circle,#C9A24B,transparent)"></div>
-    <img src="{{ '/assets/igi-icon.svg' | relative_url }}" alt="Igi" class="relative w-24 h-24 rounded-3xl"/>
-  </div>
+  <!-- HERO -->
+  <header class="relative flex flex-col items-center justify-center px-6 py-24 overflow-hidden text-center">
+    <!-- gilded corner filigree -->
+    <div class="absolute top-6 left-6 w-16 h-16 border-t-2 border-l-2 pointer-events-none" style="border-color:rgba(201,162,75,0.6)"></div>
+    <div class="absolute bottom-6 right-6 w-16 h-16 border-b-2 border-r-2 pointer-events-none" style="border-color:rgba(201,162,75,0.6)"></div>
 
-  <h1 class="font-display text-6xl tracking-[0.1em] mb-2">IGI</h1>
-  <div class="font-serif italic text-3xl tracking-[0.15em] text-muted mb-6">Find the Words</div>
+    <div class="relative mb-8">
+      <div class="absolute inset-0 scale-150 rounded-full blur-2xl opacity-40" style="background:radial-gradient(circle,#E6CB85,transparent)"></div>
+      <img src="{{ '/assets/igi-icon.svg' | relative_url }}" alt="Igi" class="relative w-24 h-24 rounded-3xl" style="box-shadow:0 4px 14px rgba(42,31,24,0.3)"/>
+    </div>
 
-  <div class="flex items-center gap-3 mb-6">
-    <div class="w-16 h-px bg-muted/30"></div>
-    <div class="w-1.5 h-1.5 rounded-full" style="background:rgba(212,169,71,0.6)"></div>
-    <div class="w-16 h-px bg-muted/30"></div>
-  </div>
+    <h1 class="igi-title text-6xl tracking-[0.12em] ink-900 mb-1">IGI</h1>
+    <div class="mx-auto mb-4 rounded-full" style="width:72px;height:3px;background:#C9A24B"></div>
+    <div class="igi-title text-2xl tracking-[0.1em] ink-700 mb-6">Find the Words</div>
 
-  <p class="font-serif text-muted text-lg max-w-sm mb-2">{% t igi.tagline1 %}</p>
-  <p class="font-serif text-white text-lg max-w-sm mb-8">{% t igi.tagline2 %}</p>
+    <div class="flex items-center gap-3 mb-6">
+      <div class="igi-rule"></div>
+      <div class="igi-diamond"></div>
+      <div class="igi-rule"></div>
+    </div>
 
-  <a href="https://play.google.com/store/apps/details?id=com.ygar.app.igi"
-     target="_blank" rel="noopener"
-     class="inline-flex items-center gap-3 px-6 py-3.5 rounded transition-colors"
-     style="border:1px solid #C9A24B" onmouseover="this.style.background='rgba(201,162,75,0.1)'" onmouseout="this.style.background='transparent'">
-    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M3.18 23.76a2 2 0 0 0 2.04-.15l11.62-6.72-2.6-2.6L3.18 23.76zm17.3-11.53L17.7 10.6 14.9 13.4l2.8 2.8 2.78-1.6a1.53 1.53 0 0 0 0-2.37zM3.05.24A1.5 1.5 0 0 0 2 1.64v20.72a1.5 1.5 0 0 0 1.05 1.4l12.17-12.17L3.05.24zm11.85 10.84L5.22.39l11.62 6.72-2.94 2.97z"/>
-    </svg>
-    <span class="font-sans text-sm tracking-[0.08em] uppercase">{% t igi.cta %}</span>
-  </a>
+    <p class="text-lg max-w-sm mb-2 ink-700">{% t igi.tagline1 %}</p>
+    <p class="text-lg max-w-sm mb-8 ink-900 font-medium">{% t igi.tagline2 %}</p>
 
-</header>
+    <a href="https://play.google.com/store/apps/details?id=com.ygar.app.igi"
+       target="_blank" rel="noopener"
+       class="igi-cta inline-flex items-center gap-3 px-7 py-3.5 rounded-[10px] transition-all no-underline">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3.18 23.76a2 2 0 0 0 2.04-.15l11.62-6.72-2.6-2.6L3.18 23.76zm17.3-11.53L17.7 10.6 14.9 13.4l2.8 2.8 2.78-1.6a1.53 1.53 0 0 0 0-2.37zM3.05.24A1.5 1.5 0 0 0 2 1.64v20.72a1.5 1.5 0 0 0 1.05 1.4l12.17-12.17L3.05.24zm11.85 10.84L5.22.39l11.62 6.72-2.94 2.97z"/>
+      </svg>
+      <span class="igi-title text-sm tracking-[0.08em] uppercase">{% t igi.cta %}</span>
+    </a>
+  </header>
 
-<!-- ABOUT -->
-<section class="max-w-4xl mx-auto px-6 py-16 border-t border-border">
-  <p class="text-[11px] tracking-[0.22em] uppercase mb-3" style="color:#D4A947">{% t igi.about_label %}</p>
-  <h2 class="font-display text-2xl tracking-wide mb-6">{% t igi.about_title %}</h2>
-  <p class="font-serif text-muted leading-relaxed mb-4">{% t igi.about_body1 %}</p>
-  <p class="font-serif text-muted leading-relaxed italic">{% t igi.about_body2 %}</p>
-</section>
+  <!-- ABOUT / HOW TO PLAY -->
+  <section class="max-w-3xl mx-auto px-6 py-16" style="border-top:1px solid rgba(143,111,42,0.25)">
+    <p class="igi-title text-[12px] tracking-[0.22em] uppercase mb-3" style="color:#8F6F2A">{% t igi.about_label %}</p>
+    <h2 class="igi-title text-2xl tracking-wide ink-900 mb-6">{% t igi.about_title %}</h2>
+    <p class="leading-relaxed ink-700 mb-4">{% t igi.about_body1 %}</p>
+    <p class="leading-relaxed ink-700">{% t igi.about_body2 %}</p>
+  </section>
 
-<!-- FEATURES -->
-<section class="max-w-4xl mx-auto px-6 py-16 border-t border-border">
-  <p class="text-[11px] tracking-[0.22em] uppercase mb-3" style="color:#D4A947">{% t igi.feat_label %}</p>
-  <h2 class="font-display text-2xl tracking-wide mb-8">{% t igi.feat_title %}</h2>
-  <ul class="grid sm:grid-cols-2 gap-4">
-    <li class="p-5 rounded-xl border border-border bg-card">
-      <div class="font-serif font-bold text-sm mb-1">{% t igi.feat1_title %}</div>
-      <div class="text-xs text-muted leading-relaxed">{% t igi.feat1_body %}</div>
-    </li>
-    <li class="p-5 rounded-xl border border-border bg-card">
-      <div class="font-serif font-bold text-sm mb-1">{% t igi.feat2_title %}</div>
-      <div class="text-xs text-muted leading-relaxed">{% t igi.feat2_body %}</div>
-    </li>
-    <li class="p-5 rounded-xl border border-border bg-card">
-      <div class="font-serif font-bold text-sm mb-1">{% t igi.feat3_title %}</div>
-      <div class="text-xs text-muted leading-relaxed">{% t igi.feat3_body %}</div>
-    </li>
-    <li class="p-5 rounded-xl border border-border bg-card">
-      <div class="font-serif font-bold text-sm mb-1">{% t igi.feat4_title %}</div>
-      <div class="text-xs text-muted leading-relaxed">{% t igi.feat4_body %}</div>
-    </li>
-  </ul>
-</section>
+  <!-- FEATURES (slate chrome cards on the parchment page) -->
+  <section class="max-w-4xl mx-auto px-6 py-16" style="border-top:1px solid rgba(143,111,42,0.25)">
+    <p class="igi-title text-[12px] tracking-[0.22em] uppercase mb-3" style="color:#8F6F2A">{% t igi.feat_label %}</p>
+    <h2 class="igi-title text-2xl tracking-wide ink-900 mb-8">{% t igi.feat_title %}</h2>
+    <ul class="grid sm:grid-cols-2 gap-4">
+      <li class="igi-panel p-5 rounded-xl">
+        <div class="igi-title text-sm tracking-wide mb-1" style="color:#F1DEBD">{% t igi.feat1_title %}</div>
+        <div class="text-xs leading-relaxed" style="color:#C9B89B">{% t igi.feat1_body %}</div>
+      </li>
+      <li class="igi-panel p-5 rounded-xl">
+        <div class="igi-title text-sm tracking-wide mb-1" style="color:#F1DEBD">{% t igi.feat2_title %}</div>
+        <div class="text-xs leading-relaxed" style="color:#C9B89B">{% t igi.feat2_body %}</div>
+      </li>
+      <li class="igi-panel p-5 rounded-xl">
+        <div class="igi-title text-sm tracking-wide mb-1" style="color:#F1DEBD">{% t igi.feat3_title %}</div>
+        <div class="text-xs leading-relaxed" style="color:#C9B89B">{% t igi.feat3_body %}</div>
+      </li>
+      <li class="igi-panel p-5 rounded-xl">
+        <div class="igi-title text-sm tracking-wide mb-1" style="color:#F1DEBD">{% t igi.feat4_title %}</div>
+        <div class="text-xs leading-relaxed" style="color:#C9B89B">{% t igi.feat4_body %}</div>
+      </li>
+    </ul>
+  </section>
 
-<!-- PRIVACY LINK -->
-<section class="max-w-4xl mx-auto px-6 py-10 border-t border-border">
-  <a href="{{ privacy_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">
-    {% t nav.privacy %} →
-  </a>
-</section>
+  <!-- PRIVACY LINK -->
+  <section class="max-w-4xl mx-auto px-6 py-10" style="border-top:1px solid rgba(143,111,42,0.25)">
+    <a href="{{ privacy_url | relative_url }}" class="text-xs tracking-wide hover:underline ink-500">
+      {% t nav.privacy %} →
+    </a>
+  </section>
+
+</div>

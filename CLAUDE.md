@@ -4,12 +4,23 @@ Static GitHub Pages site for **Ygar Studio**, an independent Android game studio
 
 ## Conventions
 
-- Each app gets its own subfolder (`enko/`, `igi/`, future apps follow the same pattern). Every app has `index.html` + `privacy-policy.html`, an `igi:` / `enko:` i18n namespace (+ a `<app>_privacy:` one), an icon SVG in `assets/`, and a card in the home "Our Games" grid.
-- Per-app accent: Enko = purple (`accent` token); Igi = gold (`#D4A947` / `#C9A24B`, inline styles). New apps pick their own accent so app pages stay visually distinct.
+- Each app gets its own subfolder (`enko/`, `igi/`, future apps follow the same pattern). Every app has `index.html` + `privacy-policy.html`, an `<app>:` i18n namespace (+ a `<app>_privacy:` one), an icon SVG in `assets/`, and a card in the home "Our Games" grid.
 - All pages use **Tailwind CSS CDN** with a shared custom config (colors + font families).
-- **Fonts** (Google Fonts): Macondo Swash Caps (studio wordmark "ygar"), Metamorphous (headings), Noto Serif (body), Noto Sans (UI labels).
-- **Bilingual** EN/FR everywhere via JS toggle — `lang-hidden` CSS class, `setLang()` function.
-- Logo style: `font-script` ("ygar" in Macondo Swash Caps) + small-caps "Studio" label below, matching `ygar_studio_header.svg`.
+- **Bilingual** EN/FR via the `jekyll-multiple-languages-plugin` (`{% t namespace.key %}`, `/fr/` path prefix, `lang_en` / `lang_fr` front-matter) — NOT a JS toggle.
+- The **studio shell is shared and constant**: `_layouts/default.html` nav + footer use the dark-lapis studio chrome and the gold Macondo "Ygar" wordmark on every page.
+
+### Per-app identity (SPEC)
+
+Each app page must reflect **its own app's** look so it reads as that product, not a studio template. The shared shell (nav/footer) stays studio chrome; the page **content** between them carries the app's identity:
+
+- **Pull the palette, fonts, and mood from the app's own `docs/DESIGN.md`** (in its Android repo). Use inline styles / a scoped `<style>` since the Tailwind config only holds the default (Enko) tokens.
+- **Gameplay copy comes from the app itself** — store `description_{en,fr}.md` and the in-app tutorial/didacticiel strings (`values*/strings.xml`) — so the site matches the real rules (e.g. player counts, objectives). Keep numbers in sync with the app (`MAX_PLAYERS` etc.).
+- Keep EN + FR i18n keys in sync (1:1 in `_i18n/en.yml` and `_i18n/fr.yml`).
+
+| App | Page identity | Source repo |
+|---|---|---|
+| **Enko Clues** | Dark lapis page (`#050D1F`), **purple** accent (`#7C3AED`), Noto Serif body. Matches the shared default config. | `C:\Users\Sesa725153\AndroidStudioProjects\enko` |
+| **Igi** | **Cream parchment** page (`#F5EBD6`→`#E8D9B8`→`#C9B084`), **ink-sepia** text (`#4A3A2E`/`#2A1F18`), **slate/gold** chrome cards (`#1A2237`/`#222C44` + `#C9A24B`), **gold stone-seal** CTA, joker-hat mascot, harlequin-diamond dividers, jewel accents. Titles **Metamorphous**, body **Noto Sans** — **Noto Serif is banned** (mirrors the app's font rule). | `C:\Users\Sesa725153\AndroidStudioProjects\igi` |
 
 ## Source assets
 

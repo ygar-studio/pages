@@ -15,7 +15,7 @@ home:
   games_title: "Available now"
   enko_short: "Six cryptic clues. One answer. Can you guess it before running out of hints?"
   enko_cta: "Discover →"
-  igi_short: "One word per turn to reveal the secret. A pass-and-play party game for 2 to 8 players."
+  igi_short: "One word per turn to reveal the secret. A pass-and-play party game for 2 to 14 players."
   igi_cta: "Discover →"
 
 enko:
@@ -99,19 +99,22 @@ privacy:
 igi:
   page_title: "Igi"
   tagline1: "One word per turn to reveal the secret."
-  tagline2: "A pass-and-play party game for 2 to 8."
+  tagline2: "A pass-and-play party game for 2 to 14."
   cta: "Get it on Google Play"
-  about_label: "About"
+  about_label: "How to play"
   about_title: "A word game of careful clues"
   about_body1: >
-    Each turn, one player draws a secret word and leads the table to it with a single related
-    word. Every card sets a target — find it in exactly N turns, or in N at most — so every clue
-    has to land just right.
-  about_body2: "No account. No ads. No internet. Just the device, the words, and the table."
+    On your turn, pick one of three cards — each shows a word, its difficulty, and the points to
+    win (1 to 5). One player gives clues to lead the others to that word without ever saying it;
+    once it's found, the device passes on.
+  about_body2: >
+    Every card sets an objective — find the word in an exact number of turns, no sooner and no
+    later, or within a maximum before turns run out. Pace your clues to hit the target. Every clue
+    must be related to the word, or the turn is lost. First to the target score wins.
   feat_label: "Features"
   feat_title: "Built for the table"
   feat1_title: "Local pass-and-play"
-  feat1_body: "Multiplayer for 2 to 8 on a single device, passed around the table. No internet required."
+  feat1_body: "Multiplayer for 2 to 14 on a single device, passed around the table. No internet required."
   feat2_title: "Precise objectives"
   feat2_body: "Each card asks for the word in exactly N turns, or in N at most. Dose your clues carefully."
   feat3_title: "Profiles & statistics"

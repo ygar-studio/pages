@@ -15,7 +15,7 @@ home:
   games_title: "Disponible maintenant"
   enko_short: "Six indices énigmatiques. Une réponse. Trouverez-vous avant la fin des indices ?"
   enko_cta: "Découvrir →"
-  igi_short: "Un seul mot par tour pour révéler le secret. Un jeu à faire tourner, de 2 à 8 joueurs."
+  igi_short: "Un seul mot par tour pour révéler le secret. Un jeu à faire tourner, de 2 à 14 joueurs."
   igi_cta: "Découvrir →"
 
 enko:
@@ -105,19 +105,22 @@ privacy:
 igi:
   page_title: "Igi"
   tagline1: "Un seul mot par tour pour révéler le secret."
-  tagline2: "Un jeu à faire tourner, de 2 à 8 joueurs."
+  tagline2: "Un jeu à faire tourner, de 2 à 14 joueurs."
   cta: "Disponible sur Google Play"
-  about_label: "À propos"
+  about_label: "Comment jouer"
   about_title: "Un jeu de mots tout en finesse"
   about_body1: >
-    À chaque tour, un joueur tire un mot secret et y guide la table avec un seul mot relié.
-    Chaque carte fixe un objectif — le trouver en exactement N tours, ou en N au maximum —
-    alors chaque indice doit tomber juste.
-  about_body2: "Pas de compte. Pas de pub. Pas d'internet. Juste l'appareil, les mots et la table."
+    À votre tour, choisissez l'une des trois cartes — chacune affiche un mot, sa difficulté et
+    les points à gagner (1 à 5). Un joueur donne des indices pour faire deviner ce mot aux autres,
+    sans jamais le prononcer ; une fois trouvé, on passe l'appareil.
+  about_body2: >
+    Chaque carte fixe un objectif — trouver le mot en un nombre de tours exact, ni avant ni après,
+    ou avant la fin d'un maximum. Dosez vos indices pour viser juste. Chaque mot indice doit être
+    lié au mot, sinon le tour est perdu. Le premier à atteindre le score cible gagne.
   feat_label: "Fonctionnalités"
   feat_title: "Pensé pour la tablée"
   feat1_title: "Pass-and-play local"
-  feat1_body: "Multijoueur de 2 à 8 sur un seul appareil, qu'on se passe. Aucune connexion requise."
+  feat1_body: "Multijoueur de 2 à 14 sur un seul appareil, qu'on se passe. Aucune connexion requise."
   feat2_title: "Objectifs précis"
   feat2_body: "Chaque carte demande le mot en exactement N tours, ou en N au maximum. Dosez vos indices."
   feat3_title: "Profils & statistiques"
