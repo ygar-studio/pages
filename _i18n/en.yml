@@ -15,6 +15,8 @@ home:
   games_title: "Available now"
   enko_short: "Six cryptic clues. One answer. Can you guess it before running out of hints?"
   enko_cta: "Discover →"
+  igi_short: "One word per turn to reveal the secret. A pass-and-play party game for 2 to 8 players."
+  igi_cta: "Discover →"
 
 enko:
   page_title: "Enko Clues"
@@ -93,3 +95,61 @@ privacy:
   s8_title: "8. Changes to this policy"
   s8_body: "We may update this policy from time to time. Changes will be posted here with an updated date."
   s9_title: "9. Contact"
+
+igi:
+  page_title: "Igi"
+  tagline1: "One word per turn to reveal the secret."
+  tagline2: "A pass-and-play party game for 2 to 8."
+  cta: "Get it on Google Play"
+  about_label: "About"
+  about_title: "A word game of careful clues"
+  about_body1: >
+    Each turn, one player draws a secret word and leads the table to it with a single related
+    word. Every card sets a target — find it in exactly N turns, or in N at most — so every clue
+    has to land just right.
+  about_body2: "No account. No ads. No internet. Just the device, the words, and the table."
+  feat_label: "Features"
+  feat_title: "Built for the table"
+  feat1_title: "Local pass-and-play"
+  feat1_body: "Multiplayer for 2 to 8 on a single device, passed around the table. No internet required."
+  feat2_title: "Precise objectives"
+  feat2_body: "Each card asks for the word in exactly N turns, or in N at most. Dose your clues carefully."
+  feat3_title: "Profiles & statistics"
+  feat3_body: "Saved player profiles track victories, best guessers, and points-per-game leaderboards."
+  feat4_title: "Bilingual & offline"
+  feat4_body: "Play in English or French. No account, no ads, no connection — ever."
+
+igi_privacy:
+  label: "Legal"
+  title: "Privacy Policy"
+  meta: "Igi — Ygar Studio — Last updated: June 2026"
+  intro: >
+    Igi is designed to respect your privacy. The game runs fully offline,
+    collects no personal data, and contains no advertising.
+  s1_title: "1. Who we are"
+  s1_body: >
+    Igi is published by Ygar Studio, an independent developer.
+    For any privacy-related question, contact us at
+  s2_title: "2. Data we do not collect"
+  s2_intro: "Ygar Studio does not collect, store, or share any of the following:"
+  s2_li1: "Personal identity information (name, email, phone number)"
+  s2_li2: "Location data"
+  s2_li3: "Device identifiers or advertising IDs"
+  s2_li4: "Usage analytics or crash reports sent to our servers"
+  s2_li5: "In-app behaviour or gameplay telemetry"
+  s3_title: "3. Data stored on your device"
+  s3_body: >
+    The game stores player profiles, statistics, and settings
+    <strong class="text-white font-semibold">exclusively on your device</strong>
+    via Android local storage. This data never leaves your device.
+  s4_title: "4. No network access"
+  s4_body: >
+    Igi works entirely offline and requires no internet connection. It contacts no server —
+    neither Ygar Studio's nor any third party's — so none of your data is ever transmitted.
+  s5_title: "5. Children's privacy"
+  s5_body: "Igi does not knowingly collect data from children under 13. The game displays no advertising and requires no account."
+  s6_title: "6. Third-party services"
+  s6_body: "Igi embeds no analytics SDKs, advertising networks, crash-reporting services, or cloud services. It is a fully self-contained, offline game."
+  s7_title: "7. Changes to this policy"
+  s7_body: "We may update this policy from time to time. Changes will be posted here with an updated date."
+  s8_title: "8. Contact"

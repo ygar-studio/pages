@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="Igi app icon">
+  <defs>
+    <linearGradient id="igiSlate" x1="20" y1="20" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1A2237"/>
+      <stop offset="0.6" stop-color="#222C44"/>
+      <stop offset="1" stop-color="#1A2237"/>
+    </linearGradient>
+    <radialGradient id="igiGlow" cx="54" cy="52" r="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2D3B55"/>
+      <stop offset="1" stop-color="#2D3B55" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="igiClip"><rect x="0" y="0" width="108" height="108" rx="24"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#igiClip)">
+    <rect x="0" y="0" width="108" height="108" fill="url(#igiSlate)"/>
+    <rect x="0" y="0" width="108" height="108" fill="url(#igiGlow)"/>
+
+    <!-- Joker hat crest (ruby / emerald / sapphire spikes, gold bells + band) -->
+    <g transform="translate(22,32) scale(2)">
+      <path d="M9,18 C8.5,12.5 6.5,9 4,6 C9,8 12.5,12.5 13.5,18 Z" fill="#C1404E"/>
+      <path d="M13.5,18 C14,11 15.5,7 17,4 C18.5,7 20,11 20.5,18 Z" fill="#5BC97A"/>
+      <path d="M25,18 C25.5,12.5 27.5,9 30,6 C25,8 21.5,12.5 20.5,18 Z" fill="#4A8BD6"/>
+      <circle cx="4" cy="5.5" r="1.8" fill="#E6CB85"/>
+      <circle cx="17" cy="3.5" r="1.8" fill="#E6CB85"/>
+      <circle cx="30" cy="5.5" r="1.8" fill="#E6CB85"/>
+      <path d="M8.75,17.5 H25.25 A1.75,1.75 0 0 1 27,19.25 A1.75,1.75 0 0 1 25.25,21 H8.75 A1.75,1.75 0 0 1 7,19.25 A1.75,1.75 0 0 1 8.75,17.5 Z" fill="#C9A24B"/>
+    </g>
+
+    <rect x="1" y="1" width="106" height="106" rx="23" fill="none" stroke="#C9A24B" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+</svg>

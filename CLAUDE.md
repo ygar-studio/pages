@@ -4,7 +4,8 @@ Static GitHub Pages site for **Ygar Studio**, an independent Android game studio
 
 ## Conventions
 
-- Each app gets its own subfolder (`enko/`, future apps follow the same pattern).
+- Each app gets its own subfolder (`enko/`, `igi/`, future apps follow the same pattern). Every app has `index.html` + `privacy-policy.html`, an `igi:` / `enko:` i18n namespace (+ a `<app>_privacy:` one), an icon SVG in `assets/`, and a card in the home "Our Games" grid.
+- Per-app accent: Enko = purple (`accent` token); Igi = gold (`#D4A947` / `#C9A24B`, inline styles). New apps pick their own accent so app pages stay visually distinct.
 - All pages use **Tailwind CSS CDN** with a shared custom config (colors + font families).
 - **Fonts** (Google Fonts): Macondo Swash Caps (studio wordmark "ygar"), Metamorphous (headings), Noto Serif (body), Noto Sans (UI labels).
 - **Bilingual** EN/FR everywhere via JS toggle — `lang-hidden` CSS class, `setLang()` function.
@@ -52,15 +53,22 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
 
 ## App info
 
-- **Name**: Enko Clues
+**Enko Clues**
 - **Package**: `com.ygar.app.enko`
-- **Publisher**: Ygar Studio 𒅗𒃻
 - **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.enko`
+- **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\enko`
+
+**Igi**
+- **Package**: `com.ygar.app.igi`
+- **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.igi`
+- **Icon**: `assets/igi-icon.svg` (joker-hat crest on slate, derived from the Igi launcher vector)
+- **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\igi`
+
+- **Publisher**: Ygar Studio 𒅗𒃻
 - **Contact**: ygar.studio@gmail.com
 
 ## Privacy policy
 
-- Lives at `enko/privacy-policy.html`.
-- Single page with JS EN/FR language toggle.
-- Covers: no data collection, local storage only, optional Google Play Games cloud save, INTERNET permission scope.
+- One per app: `enko/privacy-policy.html` (`privacy:` namespace) and `igi/privacy-policy.html` (`igi_privacy:` namespace).
+- Enko covers optional Google Play Games cloud save + INTERNET permission; Igi is fully offline (no network access, no cloud, no third-party services).
 - **Both languages must be kept in sync** when updating policy text.
