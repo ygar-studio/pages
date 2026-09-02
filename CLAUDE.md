@@ -20,6 +20,7 @@ Each app page must reflect **its own app's** look so it reads as that product, n
 | App | Page identity | Source repo |
 |---|---|---|
 | **Enko Clues** | Dark lapis page (`#050D1F`), **purple** accent (`#7C3AED`), Noto Serif body. Matches the shared default config. | `C:\Users\Sesa725153\AndroidStudioProjects\enko` |
+| **City Transport** | **Printed transit plan**: warm paper page (`#f4f1e9`), dark-ink text (`#2c3542`/`#1f2733`), water-blue rules (`#a7cbe8`), teal-slate eyebrows (`#315963`), white map tiles with `#dcd6c8` borders, green signal CTA (`#1fa45b`). Line hues (metro blue `#2569cd`, green, amber) are **accents only** — in the game a hue means a line, so they must never become page furniture. Titles **Noto Sans** with wide tracking, not Metamorphous: a decorative face fights a schematic map. | `C:\Users\Sesa725153\AndroidStudioProjects\CityTransport` |
 | **Igi** | **Cream parchment** page (`#F5EBD6`→`#E8D9B8`→`#C9B084`), **ink-sepia** text (`#4A3A2E`/`#2A1F18`), **slate/gold** chrome cards (`#1A2237`/`#222C44` + `#C9A24B`), **gold stone-seal** CTA, joker-hat mascot, harlequin-diamond dividers, jewel accents. Titles **Metamorphous**, body **Noto Sans** — **Noto Serif is banned** (mirrors the app's font rule). | `C:\Users\Sesa725153\AndroidStudioProjects\igi` |
 
 ## Source assets
@@ -69,6 +70,13 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
 - **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.enko`
 - **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\enko`
 
+**City Transport**
+- **Package**: `com.ygar.app.citytransport`
+- **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.citytransport` (Draft — closed testing as of 2026-09-02)
+- **Icon**: `assets/citytransport-icon.svg` — generated from the SAME fractional geometry as
+  the app's own `tools/gen_logo.py`, so the site mark and the launcher icon are one drawing.
+- **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\CityTransport`
+
 **Igi**
 - **Package**: `com.ygar.app.igi`
 - **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.igi`
@@ -80,6 +88,13 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
 
 ## Privacy policy
 
-- One per app: `enko/privacy-policy.html` (`privacy:` namespace) and `igi/privacy-policy.html` (`igi_privacy:` namespace).
-- Enko covers optional Google Play Games cloud save + INTERNET permission; Igi is fully offline (no network access, no cloud, no third-party services).
+- One per app: `enko/privacy-policy.html` (`privacy:` namespace), `igi/privacy-policy.html`
+  (`igi_privacy:`) and `citytransport/privacy-policy.html` (`citytransport_privacy:`).
+- Enko covers optional Google Play Games cloud save + INTERNET permission; Igi is fully offline
+  (no network access, no cloud, no third-party services); **City Transport** is offline too but
+  has **in-app purchases**, so its policy carries a Play Billing section and declares the
+  `com.android.vending.BILLING` permission alongside `VIBRATE`.
 - **Both languages must be kept in sync** when updating policy text.
+- City Transport's policy is a MIRROR: the source of truth is `docs/legal/privacy-policy.md` in
+  the app repo, and the app links here (`PRIVACY_URL` in `game/scripts/ui/settings.gd`). Change
+  one, change the other.
