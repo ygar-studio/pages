@@ -18,6 +18,8 @@ home:
   enko_cta: "Découvrir →"
   igi_short: "Un seul mot par tour pour révéler le secret. Un jeu à faire tourner, de 2 à 14 joueurs."
   igi_cta: "Découvrir →"
+  citytransport_short: "Tracez les lignes, passez la plus chargée en Express, et faites circuler la ville."
+  citytransport_cta: "Découvrir →"
 
 enko:
   page_title: "Enko Clues"
@@ -164,3 +166,92 @@ igi_privacy:
   s7_title: "7. Modifications"
   s7_body: "Nous pouvons mettre à jour cette politique. Les modifications seront publiées sur cette page avec une date de mise à jour."
   s8_title: "8. Contact"
+
+citytransport:
+  page_title: "City Transport"
+  label: "Stratégie · Android"
+  tagline1: "Tracez les lignes. Faites circuler la ville."
+  tagline2: "Un puzzle minimaliste de réseau de transport."
+  cta: "Télécharger sur Google Play"
+  about_label: "L'idée"
+  about_title: "Toutes les lignes naissent égales — quelques-unes passent en Express"
+  about_body1: >
+    Les stations poussent dans une vraie ville et les voyageurs s'accumulent, chacun voulant une
+    station à la forme de sa destination. Vous tracez les lignes, y placez des trains et acheminez
+    la foule. Une station saturée au-delà de son délai met fin à la partie ; atteindre l'objectif
+    de voyageurs gagne le niveau sur-le-champ.
+  about_body2: >
+    Le choix qui décide d'une partie, c'est quelle ligne obtient l'upgrade Express — plus rapide,
+    plus capacitaire, dessinée dans un habillage rayé noir et jaune. Les emplacements Express sont
+    rares : un seul jusqu'aux niveaux moyens, deux sur les plus durs. Alimentez la ligne améliorée
+    avec le reste du réseau, et transformez une station chargée en hub pour fluidifier les
+    correspondances.
+  feat_label: "Le jeu"
+  feat_title: "Pensé pour se lire d'un coup d'œil"
+  feat1_title: "Une campagne de 20 villes"
+  feat1_body: "De Lyon à Tokyo, chaque ville avec sa géographie, son eau et sa difficulté croissante. Chaque niveau terminé donne une note de satisfaction du réseau de 1 à 100 — rejouez pour battre votre record."
+  feat2_title: "Mode Cartes"
+  feat2_body: "12 packs de pays et 117 villes en partie rapide, une course au score sans fin avec un record par ville."
+  feat3_title: "À une main, minimaliste"
+  feat3_body: "Glissez pour tracer, pincez pour zoomer, appui long pour modifier. Un rendu de plan de transport clair, fait pour des sessions courtes."
+  feat4_title: "Hors ligne, six langues"
+  feat4_body: "Entièrement jouable hors ligne. Anglais, français, espagnol, allemand, italien et portugais. Sans pub, sans pistage, sans compte."
+  maps_label: "Mode Cartes"
+  maps_title: "Toute la carte du monde, un pack à la fois"
+  maps_body: >
+    Cartes, c'est la moitié libre du jeu : choisissez un pack de pays, une ville, et lancez une
+    partie sans fin pour le plus grand nombre de voyageurs. 117 villes, chacune avec sa difficulté.
+  maps_price: >
+    Le Brésil et l'Italie sont offerts, et chaque joueur reçoit deux déblocages gratuits en plus.
+    Ensuite, un pack est un petit achat unique, ou vous débloquez tous les packs d'un coup —
+    actuels et à venir.
+
+citytransport_privacy:
+  label: "Mentions légales"
+  title: "Politique de confidentialité"
+  meta: "City Transport — Ygar Studio — Dernière mise à jour : septembre 2026"
+  intro: >
+    City Transport est un jeu solo qui fonctionne hors ligne. Nous ne collectons aucune donnée
+    personnelle, n'affichons aucune publicité et n'utilisons aucun outil d'analyse. Le seul trafic
+    réseau que le jeu émet de lui-même est celui de Google Play Billing, lorsque vous achetez un
+    pack de pays.
+  s1_title: "1. Qui nous sommes"
+  s1_body: >
+    City Transport est édité par Ygar Studio, développeur indépendant.
+    Pour toute question relative à la confidentialité, écrivez-nous à
+  s2_title: "2. Données que nous ne collectons pas"
+  s2_intro: "Ygar Studio ne collecte, ne stocke et ne partage aucun des éléments suivants :"
+  s2_li1: "Informations d'identité (nom, e-mail, numéro de téléphone)"
+  s2_li2: "Données de localisation"
+  s2_li3: "Identifiants d'appareil ou identifiants publicitaires"
+  s2_li4: "Statistiques d'usage ou rapports de plantage envoyés vers nos serveurs"
+  s2_li5: "Comportement dans l'application ou télémétrie de jeu"
+  s3_title: "3. Données stockées sur votre appareil"
+  s3_body: >
+    Les niveaux terminés et leurs notes de satisfaction, les records du mode Cartes, les packs de
+    pays débloqués et vos réglages sont enregistrés
+    <strong>uniquement sur votre appareil</strong>, dans le stockage privé de l'application. Si la
+    <strong>sauvegarde automatique</strong> d'Android est activée, Android peut en copier une
+    sauvegarde sur votre propre compte Google afin de la restaurer après réinstallation — c'est
+    géré par Android sous votre compte, et le développeur n'y a jamais accès.
+  s4_title: "4. Achats intégrés"
+  s4_body: >
+    Certains packs de pays du mode Cartes peuvent être débloqués par un achat unique. Les achats
+    sont gérés <strong>entièrement par Google Play Billing</strong> : vos données de paiement vont
+    à Google, jamais à nous. L'application demande à Google Play quels produits votre compte
+    possède, afin de les débloquer à nouveau après une réinstallation ou sur un autre appareil, et
+    ne conserve que cette réponse — la liste des packs débloqués — sur votre appareil. Nous ne
+    recevons de Google aucune information de paiement ni donnée personnelle, au-delà des rapports
+    de ventes agrégés de Play.
+  s5_title: "5. Autorisations"
+  s5_body: >
+    L'application demande deux autorisations et aucune autre : <strong>Vibreur</strong>, pour le
+    retour haptique en jeu, et <strong>com.android.vending.BILLING</strong>, pour les achats
+    ci-dessus.
+  s6_title: "6. Confidentialité des enfants"
+  s6_body: "City Transport ne collecte pas sciemment de données concernant des enfants de moins de 13 ans. Le jeu ne contient ni contenu généré par les utilisateurs, ni chat, ni publicité, ni compte. Il contient des achats intégrés facultatifs, gérés par Google Play."
+  s7_title: "7. Services tiers"
+  s7_body: "Le jeu n'intègre aucun SDK d'analyse, réseau publicitaire, service de rapport de plantage ni service cloud. Google Play Billing est le seul service tiers contacté, et uniquement lors d'un achat."
+  s8_title: "8. Suppression des données"
+  s8_body: "Toutes les données sont locales. Désinstaller l'application efface tout, y compris la copie de sauvegarde automatique, conformément aux règles d'Android. Rien n'est conservé de notre côté, il n'y a donc rien dont demander la suppression."
+  s9_title: "9. Contact"

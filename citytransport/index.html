@@ -1,0 +1,133 @@
+---
+layout: default
+title: "City Transport"
+description: "Draw transit lines across famous cities, upgrade the busiest to Express, and keep the city moving."
+sticky_nav: true
+sitemap:
+  priority: 0.9
+lang_en: /citytransport/
+lang_fr: /fr/citytransport/
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "City Transport",
+  "operatingSystem": "Android",
+  "applicationCategory": "GameApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "description": "A minimalist transport-network strategy game. Draw lines across famous cities, route passengers by the shape of their destination, and keep every station from overcrowding.",
+  "url": "{{ site.url }}{{ site.baseurl }}/citytransport/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.ygar.app.citytransport",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ygar Studio"
+  }
+}
+</script>
+{% if site.lang == "fr" %}{% assign privacy_url = "/fr/citytransport/privacy-policy/" %}{% assign home_url = "/fr/" %}{% else %}{% assign privacy_url = "/citytransport/privacy-policy/" %}{% assign home_url = "/" %}{% endif %}
+
+{% comment %}
+  City Transport carries its OWN identity (app docs/DESIGN.md, game/theme/ui_theme.gd): a printed
+  transit plan. Warm paper ground (#f4f1e9), dark ink (#2c3542), water blue (#a7cbe8), and the
+  line hues used ONLY as accents — metro blue, signal green, warning amber — never as page
+  furniture, because in the game a hue means a line. Clean sans throughout: Metamorphous is the
+  studio's decorative title face and would fight a schematic map, so titles are Noto Sans with
+  wide tracking, the way a plan letters its stations.
+{% endcomment %}
+<style>
+  .ct { background:#f4f1e9; color:#2c3542; }
+  .ct .ink-900 { color:#1f2733; } .ct .ink-700 { color:#2c3542; } .ct .ink-500 { color:#6b7686; }
+  .ct-title { font-family:'Noto Sans',sans-serif; font-weight:500; letter-spacing:.02em; }
+  .ct-eyebrow { font-family:'Noto Sans',sans-serif; letter-spacing:.22em; }
+  .ct .rule { border-bottom:1px solid #dcd6c8; }
+  .ct .tile { background:#ffffff; border:1px solid #dcd6c8; }
+  .ct .cta { background:#1fa45b; color:#ffffff; box-shadow:0 3px 0 #177a44; }
+  .ct .cta:hover { background:#23b566; }
+  .ct .ghost { border:1px solid #315963; color:#315963; }
+  .ct .ghost:hover { background:rgba(49,89,99,.08); }
+  .ct .chip { background:#dce8e6; color:#315963; }
+  /* the hero's plan: three lines and a river, the same geometry family as the icon */
+  .ct-plan { display:block; width:100%; height:auto; }
+</style>
+
+<div class="ct">
+
+  <!-- HERO -->
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-14">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-8">
+      <img src="{{ '/assets/citytransport-icon.svg' | relative_url }}" alt="City Transport"
+           class="w-24 h-24 rounded-3xl flex-shrink-0"/>
+      <div>
+        <p class="ct-eyebrow text-[11px] uppercase mb-3" style="color:#315963">{% t citytransport.label %}</p>
+        <h1 class="ct-title text-4xl ink-900 leading-tight mb-2">{% t citytransport.tagline1 %}</h1>
+        <p class="ct-title text-xl ink-500">{% t citytransport.tagline2 %}</p>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a href="https://play.google.com/store/apps/details?id=com.ygar.app.citytransport"
+         class="cta inline-block px-6 py-3 rounded-lg text-sm tracking-wide no-underline">
+        {% t citytransport.cta %}
+      </a>
+      <a href="{{ privacy_url | relative_url }}"
+         class="ghost inline-block px-6 py-3 rounded-lg text-sm tracking-wide no-underline">
+        {% t nav.privacy %}
+      </a>
+    </div>
+  </section>
+
+  <!-- THE TWIST -->
+  <section class="max-w-4xl mx-auto px-6 py-14 rule">
+    <p class="ct-eyebrow text-[11px] uppercase mb-3" style="color:#315963">{% t citytransport.about_label %}</p>
+    <h2 class="ct-title text-2xl ink-900 mb-6">{% t citytransport.about_title %}</h2>
+    <p class="text-sm ink-700 leading-relaxed mb-4">{% t citytransport.about_body1 %}</p>
+    <p class="text-sm ink-700 leading-relaxed">{% t citytransport.about_body2 %}</p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="max-w-4xl mx-auto px-6 py-14 rule">
+    <p class="ct-eyebrow text-[11px] uppercase mb-3" style="color:#315963">{% t citytransport.feat_label %}</p>
+    <h2 class="ct-title text-2xl ink-900 mb-10">{% t citytransport.feat_title %}</h2>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      <div class="tile p-6 rounded-xl">
+        <div class="chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">01</div>
+        <div class="ct-title text-base ink-900 mb-2">{% t citytransport.feat1_title %}</div>
+        <p class="text-sm ink-700 leading-relaxed">{% t citytransport.feat1_body %}</p>
+      </div>
+      <div class="tile p-6 rounded-xl">
+        <div class="chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">02</div>
+        <div class="ct-title text-base ink-900 mb-2">{% t citytransport.feat2_title %}</div>
+        <p class="text-sm ink-700 leading-relaxed">{% t citytransport.feat2_body %}</p>
+      </div>
+      <div class="tile p-6 rounded-xl">
+        <div class="chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">03</div>
+        <div class="ct-title text-base ink-900 mb-2">{% t citytransport.feat3_title %}</div>
+        <p class="text-sm ink-700 leading-relaxed">{% t citytransport.feat3_body %}</p>
+      </div>
+      <div class="tile p-6 rounded-xl">
+        <div class="chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">04</div>
+        <div class="ct-title text-base ink-900 mb-2">{% t citytransport.feat4_title %}</div>
+        <p class="text-sm ink-700 leading-relaxed">{% t citytransport.feat4_body %}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPS MODE + WHAT IT COSTS -->
+  <section class="max-w-4xl mx-auto px-6 py-14 pb-20">
+    <p class="ct-eyebrow text-[11px] uppercase mb-3" style="color:#315963">{% t citytransport.maps_label %}</p>
+    <h2 class="ct-title text-2xl ink-900 mb-6">{% t citytransport.maps_title %}</h2>
+    <p class="text-sm ink-700 leading-relaxed mb-4">{% t citytransport.maps_body %}</p>
+    <p class="text-sm ink-700 leading-relaxed">{% t citytransport.maps_price %}</p>
+
+    <p class="text-xs ink-500 mt-10">
+      <a href="{{ home_url | relative_url }}" class="hover:underline" style="color:#2569cd">{% t global.back_home %}</a>
+    </p>
+  </section>
+
+</div>

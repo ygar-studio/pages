@@ -18,6 +18,8 @@ home:
   enko_cta: "Discover →"
   igi_short: "One word per turn to reveal the secret. A pass-and-play party game for 2 to 14 players."
   igi_cta: "Discover →"
+  citytransport_short: "Draw the lines, upgrade the busiest to Express, and keep the city moving."
+  citytransport_cta: "Discover →"
 
 enko:
   page_title: "Enko Clues"
@@ -157,3 +159,87 @@ igi_privacy:
   s7_title: "7. Changes to this policy"
   s7_body: "We may update this policy from time to time. Changes will be posted here with an updated date."
   s8_title: "8. Contact"
+
+citytransport:
+  page_title: "City Transport"
+  label: "Strategy · Android"
+  tagline1: "Draw the lines. Keep the city moving."
+  tagline2: "A minimalist transport-network puzzle."
+  cta: "Get it on Google Play"
+  about_label: "The twist"
+  about_title: "Every line starts equal — a few become Express"
+  about_body1: >
+    Stations bloom across a real city and passengers gather, each one wanting a station shaped
+    like its destination. You draw the lines, put trains on them, and route the crowd. A station
+    left overcrowded past its timer ends the run; reach the delivery target and the level is won
+    on the spot.
+  about_body2: >
+    The choice that decides a run is which line earns the Express upgrade — faster, higher
+    capacity, drawn in a black-and-yellow hazard casing. Express slots are scarce: one on the
+    easier levels, two on the hardest. Feed the upgraded line with the rest of your network,
+    and turn a busy station into a hub to smooth the transfers.
+  feat_label: "Features"
+  feat_title: "Built to be read at a glance"
+  feat1_title: "A 20-city campaign"
+  feat1_body: "From Lyon to Tokyo, each city with its own geography, water and rising difficulty. Every completed level earns a network-satisfaction note from 1 to 100 — replay to beat your best."
+  feat2_title: "Maps mode"
+  feat2_body: "12 country packs and 117 quick-play cities, an endless score chase with a high score per city."
+  feat3_title: "One-handed and minimalist"
+  feat3_body: "Drag to draw, pinch to zoom, long-press to edit. A light transit-map look meant to be read in a glance, in short sessions."
+  feat4_title: "Offline, six languages"
+  feat4_body: "Plays fully offline. English, French, Spanish, German, Italian and Portuguese. No ads, no tracking, no account."
+  maps_label: "Maps mode"
+  maps_title: "The whole world map, a pack at a time"
+  maps_body: >
+    Maps is the open-ended half: pick a country pack, pick a city, and play an endless run for
+    the highest passenger count. 117 cities, each with its own difficulty.
+  maps_price: >
+    Brazil and Italy are free, and every player gets two more unlocks on the house. After that a
+    pack is a small one-time purchase, or you can unlock every pack at once — present and future.
+
+citytransport_privacy:
+  label: "Legal"
+  title: "Privacy Policy"
+  meta: "City Transport — Ygar Studio — Last updated: September 2026"
+  intro: >
+    City Transport is a single-player game that runs offline. We collect no personal data, show
+    no advertising, and use no analytics. The only network traffic the game makes on its own is
+    Google Play Billing, when you buy a country pack.
+  s1_title: "1. Who we are"
+  s1_body: >
+    City Transport is published by Ygar Studio, an independent developer.
+    For any privacy-related question, contact us at
+  s2_title: "2. Data we do not collect"
+  s2_intro: "Ygar Studio does not collect, store, or share any of the following:"
+  s2_li1: "Personal identity information (name, email, phone number)"
+  s2_li2: "Location data"
+  s2_li3: "Device identifiers or advertising IDs"
+  s2_li4: "Usage analytics or crash reports sent to our servers"
+  s2_li5: "In-app behaviour or gameplay telemetry"
+  s3_title: "3. Data stored on your device"
+  s3_body: >
+    Campaign completions and satisfaction notes, Maps high scores, which country packs are
+    unlocked, and your settings are saved
+    <strong>only on your device</strong>, in the app's private storage. If you have Android
+    <strong>Auto Backup</strong> enabled, Android may copy that save to your own Google account so
+    it can be restored when you reinstall — that is handled by Android under your own account
+    settings, and the developer never receives or accesses it.
+  s4_title: "4. In-app purchases"
+  s4_body: >
+    Some Maps country packs can be unlocked with a one-time purchase. Purchases are handled
+    <strong>entirely by Google Play Billing</strong>: your payment details go to Google, never to
+    us. The app asks Google Play which products your Google account owns, so it can unlock them
+    again after a reinstall or on another device, and stores only that answer — a list of unlocked
+    packs — on your device. We receive no payment information and no personal data from Google
+    beyond Play's own aggregated sales reports.
+  s5_title: "5. Permissions"
+  s5_body: >
+    The app requests two permissions and no others: <strong>Vibrate</strong>, for in-game haptic
+    feedback, and <strong>com.android.vending.BILLING</strong>, for the purchases above.
+  s6_title: "6. Children's privacy"
+  s6_body: "City Transport does not knowingly collect data from children under 13. It contains no user-generated content, no chat, no advertising and no account. It does contain optional in-app purchases, handled by Google Play."
+  s7_title: "7. Third-party services"
+  s7_body: "The game embeds no analytics SDKs, advertising networks, crash-reporting services or cloud services. Google Play Billing is the only third-party service it talks to, and only when you make a purchase."
+  s8_title: "8. Data deletion"
+  s8_body: "All data is local. Uninstalling the app erases everything, including the Auto Backup copy, per Android's rules. There is nothing held on our side, so there is nothing to request deletion of."
+  s9_title: "9. Contact"
