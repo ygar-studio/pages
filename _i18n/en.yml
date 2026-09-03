@@ -234,8 +234,11 @@ citytransport_privacy:
     beyond Play's own aggregated sales reports.
   s5_title: "5. Permissions"
   s5_body: >
-    The app requests two permissions and no others: <strong>Vibrate</strong>, for in-game haptic
-    feedback, and <strong>com.android.vending.BILLING</strong>, for the purchases above.
+    The app itself declares two permissions: <strong>Vibrate</strong>, for in-game haptic feedback,
+    and <strong>com.android.vending.BILLING</strong>, for the purchases above. The Google Play
+    Billing library adds <strong>Internet</strong> and <strong>Network state</strong> to the built
+    app, because reaching Play's payment servers needs them. Nothing else in the game uses the
+    network: no gameplay data, no analytics and no personal data is ever sent anywhere.
   s6_title: "6. Children's privacy"
   s6_body: "City Transport does not knowingly collect data from children under 13. It contains no user-generated content, no chat, no advertising and no account. It does contain optional in-app purchases, handled by Google Play."
   s7_title: "7. Third-party services"

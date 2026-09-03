@@ -245,9 +245,12 @@ citytransport_privacy:
     de ventes agrégés de Play.
   s5_title: "5. Autorisations"
   s5_body: >
-    L'application demande deux autorisations et aucune autre : <strong>Vibreur</strong>, pour le
-    retour haptique en jeu, et <strong>com.android.vending.BILLING</strong>, pour les achats
-    ci-dessus.
+    L'application déclare elle-même deux autorisations : <strong>Vibreur</strong>, pour le retour
+    haptique en jeu, et <strong>com.android.vending.BILLING</strong>, pour les achats ci-dessus. La
+    bibliothèque Google Play Billing ajoute <strong>Internet</strong> et <strong>État du
+    réseau</strong> à l'application compilée, car joindre les serveurs de paiement de Play les
+    exige. Rien d'autre dans le jeu n'utilise le réseau : aucune donnée de jeu, aucune statistique
+    et aucune donnée personnelle n'est jamais transmise.
   s6_title: "6. Confidentialité des enfants"
   s6_body: "City Transport ne collecte pas sciemment de données concernant des enfants de moins de 13 ans. Le jeu ne contient ni contenu généré par les utilisateurs, ni chat, ni publicité, ni compte. Il contient des achats intégrés facultatifs, gérés par Google Play."
   s7_title: "7. Services tiers"
