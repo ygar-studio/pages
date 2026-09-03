@@ -21,6 +21,7 @@ Each app page must reflect **its own app's** look so it reads as that product, n
 |---|---|---|
 | **Enko Clues** | Dark lapis page (`#050D1F`), **purple** accent (`#7C3AED`), Noto Serif body. Matches the shared default config. | `C:\Users\Sesa725153\AndroidStudioProjects\enko` |
 | **City Transport** | **Printed transit plan**: warm paper page (`#f4f1e9`), dark-ink text (`#2c3542`/`#1f2733`), water-blue rules (`#a7cbe8`), teal-slate eyebrows (`#315963`), white map tiles with `#dcd6c8` borders, green signal CTA (`#1fa45b`). Line hues (metro blue `#2569cd`, green, amber) are **accents only** — in the game a hue means a line, so they must never become page furniture. Titles **Noto Sans** with wide tracking, not Metamorphous: a decorative face fights a schematic map. | `C:\Users\Sesa725153\AndroidStudioProjects\CityTransport` |
+| **Ygar Solitaire** | **The card table**: deep green ground (`#0C2B25`→`#0F3D33`), paper card faces (`#F6F1E6`), ink text (`#1E2126`), the studio gold (`#D4A832`) used only as a rule/accent, red (`#B93F36`) for the red suits and hint teal (`#3E8E7E`) for links. Noto Sans throughout — the app reserves Macondo Swash Caps for its splash wordmark, so the studio's Metamorphous title face is deliberately unused here. | `C:\Users\Sesa725153\AndroidStudioProjects\solitaire` |
 | **Igi** | **Cream parchment** page (`#F5EBD6`→`#E8D9B8`→`#C9B084`), **ink-sepia** text (`#4A3A2E`/`#2A1F18`), **slate/gold** chrome cards (`#1A2237`/`#222C44` + `#C9A24B`), **gold stone-seal** CTA, joker-hat mascot, harlequin-diamond dividers, jewel accents. Titles **Metamorphous**, body **Noto Sans** — **Noto Serif is banned** (mirrors the app's font rule). | `C:\Users\Sesa725153\AndroidStudioProjects\igi` |
 
 ## Source assets
@@ -77,6 +78,16 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
   the app's own `tools/gen_logo.py`, so the site mark and the launcher icon are one drawing.
 - **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\CityTransport`
 
+**Ygar Solitaire**
+- **Package**: `com.ygar.app.solitaire`
+- **Play Store**: **not published yet** — pre-launch (device hardening / internal testing
+  still open in its ROADMAP). The page links to the store URL anyway, as City Transport's does.
+- **Icon**: `assets/solitaire-icon.svg` — the app's own `docs/store/icon.svg` geometry
+  verbatim, cross-checked against `res/drawable/ic_launcher_foreground.xml`.
+- **Free forever**: no ads, no IAP, no paid version (its SPEC §1.3 makes that a rule, not a
+  current state) — so its policy is the simplest of the four: VIBRATE only, no network.
+- **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\solitaire`
+
 **Igi**
 - **Package**: `com.ygar.app.igi`
 - **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.igi`
@@ -89,7 +100,8 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
 ## Privacy policy
 
 - One per app: `enko/privacy-policy.html` (`privacy:` namespace), `igi/privacy-policy.html`
-  (`igi_privacy:`) and `citytransport/privacy-policy.html` (`citytransport_privacy:`).
+  (`igi_privacy:`), `citytransport/privacy-policy.html` (`citytransport_privacy:`) and
+  `solitaire/privacy-policy.html` (`solitaire_privacy:`).
 - Enko covers optional Google Play Games cloud save + INTERNET permission; Igi is fully offline
   (no network access, no cloud, no third-party services); **City Transport** is offline too but
   has **in-app purchases**, so its policy carries a Play Billing section and declares the

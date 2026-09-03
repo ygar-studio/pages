@@ -20,7 +20,7 @@ lang_fr: /fr/
   "description": "{{ site.description }}"
 }
 </script>
-{% if site.lang == "fr" %}{% assign enko_url = "/fr/enko/" %}{% assign igi_url = "/fr/igi/" %}{% assign citytransport_url = "/fr/citytransport/" %}{% else %}{% assign enko_url = "/enko/" %}{% assign igi_url = "/igi/" %}{% assign citytransport_url = "/citytransport/" %}{% endif %}
+{% if site.lang == "fr" %}{% assign enko_url = "/fr/enko/" %}{% assign igi_url = "/fr/igi/" %}{% assign citytransport_url = "/fr/citytransport/" %}{% assign solitaire_url = "/fr/solitaire/" %}{% else %}{% assign enko_url = "/enko/" %}{% assign igi_url = "/igi/" %}{% assign citytransport_url = "/citytransport/" %}{% assign solitaire_url = "/solitaire/" %}{% endif %}
 
 <style>
   @keyframes ygar-twinkle { 0%,100% { opacity:.15; } 50% { opacity:.9; } }
@@ -239,6 +239,18 @@ lang_fr: /fr/
         <div class="font-serif text-sm text-muted">{% t home.citytransport_short %}</div>
         <div class="mt-3 text-xs tracking-widest uppercase group-hover:text-white transition-colors" style="color:#D4A947">
           {% t home.citytransport_cta %}
+        </div>
+      </div>
+    </a>
+
+    <a href="{{ solitaire_url | relative_url }}"
+       class="game-card group flex flex-col gap-4 p-6 rounded-xl border border-border bg-card no-underline">
+      <img src="{{ '/assets/solitaire-icon.svg' | relative_url }}" alt="Ygar Solitaire" class="w-20 h-20 rounded-2xl flex-shrink-0"/>
+      <div class="flex-1 min-w-0">
+        <div class="font-display text-xl tracking-wide text-white mb-1">Ygar Solitaire</div>
+        <div class="font-serif text-sm text-muted">{% t home.solitaire_short %}</div>
+        <div class="mt-3 text-xs tracking-widest uppercase group-hover:text-white transition-colors" style="color:#D4A947">
+          {% t home.solitaire_cta %}
         </div>
       </div>
     </a>

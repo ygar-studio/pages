@@ -1,0 +1,218 @@
+---
+layout: default
+title: "Ygar Solitaire"
+description: "Four classic solitaires on one calm table: Klondike, Spider, FreeCell and Pyramid. Seeded deals you can replay and share, unlimited undo, no ads."
+sticky_nav: true
+sitemap:
+  priority: 0.9
+lang_en: /solitaire/
+lang_fr: /fr/solitaire/
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ygar Solitaire",
+  "operatingSystem": "Android",
+  "applicationCategory": "GameApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "description": "A minimalist collection of four classic solitaires — Klondike, Spider, FreeCell and Pyramid — on one shared card engine. Every deal has a seed you can replay and share. Unlimited undo, no ads, no account, fully offline.",
+  "url": "{{ site.url }}{{ site.baseurl }}/solitaire/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.ygar.app.solitaire",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ygar Studio"
+  }
+}
+</script>
+{% if site.lang == "fr" %}{% assign privacy_url = "/fr/solitaire/privacy-policy/" %}{% assign home_url = "/fr/" %}{% else %}{% assign privacy_url = "/solitaire/privacy-policy/" %}{% assign home_url = "/" %}{% endif %}
+
+{% comment %}
+  Ygar Solitaire carries its OWN identity, straight from the app's docs/DESIGN.md: a quiet card
+  table, not a casino. Deep green-teal table (#0F3D33) with its darker menu sibling (#0C2B25),
+  paper card faces (#F6F1E6) with ink text (#1E2126) and desaturated red suits (#B93F36), gold
+  (#D4A832) as the studio accent only, hint teal (#3E8E7E) for the drop-target/selection accent.
+  The variant tiles are literally card faces — the app's card recipe (paper face, thin ink border,
+  corner index, one centre pip). Typography is Noto Sans throughout: the app's UI font is the
+  system sans and Macondo Swash Caps is reserved for the splash wordmark, so Metamorphous (the
+  studio's decorative title face) is deliberately NOT used here.
+{% endcomment %}
+<style>
+  .sol { background:linear-gradient(180deg,#0C2B25 0%,#0F3D33 45%,#0C2B25 100%); color:#F6F1E6; }
+  .sol-title { font-family:'Noto Sans',system-ui,sans-serif; font-weight:500; letter-spacing:.02em; }
+  .sol-eyebrow { font-family:'Noto Sans',system-ui,sans-serif; letter-spacing:.22em; color:#3E8E7E; }
+  .sol .paper { color:#F6F1E6; } .sol .muted { color:#98A0AD; }
+  .sol .rule { border-top:1px solid rgba(246,241,230,.10); }
+  /* the app's card recipe: paper face, thin ink border, rounded ~8% of width */
+  .sol-card { background:#F6F1E6; color:#1E2126; border:1px solid rgba(30,33,38,.20); border-radius:14px;
+              box-shadow:0 8px 22px rgba(0,0,0,.28); }
+  .sol-card .ink { color:#1E2126; } .sol-card .ink-soft { color:#4A5058; }
+  .sol-black { color:#1E2126; } .sol-red { color:#B93F36; }
+  /* bar surface, the app's top/bottom bars and panels */
+  .sol-bar { background:#0C2B25; border:1px solid rgba(212,168,50,.28); }
+  /* gold CTA — the studio accent, used for the win moment and nothing else in-game */
+  .sol-cta { background:#D4A832; color:#1E2126; box-shadow:0 3px 0 #9A7818; }
+  .sol-cta:hover { background:#E0B747; }
+  .sol-ghost { border:1px solid #3E8E7E; color:#8FCDBD; }
+  .sol-ghost:hover { background:rgba(62,142,126,.14); }
+  .sol-chip { background:rgba(62,142,126,.18); color:#8FCDBD; }
+  .sol-seed { font-family:'Noto Sans',system-ui,sans-serif; letter-spacing:.06em; color:#D4A832; }
+</style>
+
+<div class="sol">
+
+  <!-- HERO -->
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-14">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-8">
+      <img src="{{ '/assets/solitaire-icon.svg' | relative_url }}" alt="Ygar Solitaire"
+           class="w-24 h-24 rounded-3xl flex-shrink-0" style="box-shadow:0 8px 24px rgba(0,0,0,.4)"/>
+      <div>
+        <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.label %}</p>
+        <h1 class="sol-title text-4xl paper leading-tight mb-2">{% t solitaire.tagline1 %}</h1>
+        <p class="sol-title text-xl muted">{% t solitaire.tagline2 %}</p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm muted leading-relaxed max-w-2xl">{% t solitaire.hero_note %}</p>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="https://play.google.com/store/apps/details?id=com.ygar.app.solitaire"
+         target="_blank" rel="noopener"
+         class="sol-cta inline-flex items-center gap-3 px-6 py-3 rounded-lg text-sm tracking-wide no-underline">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3.18 23.76a2 2 0 0 0 2.04-.15l11.62-6.72-2.6-2.6L3.18 23.76zm17.3-11.53L17.7 10.6 14.9 13.4l2.8 2.8 2.78-1.6a1.53 1.53 0 0 0 0-2.37zM3.05.24A1.5 1.5 0 0 0 2 1.64v20.72a1.5 1.5 0 0 0 1.05 1.4l12.17-12.17L3.05.24zm11.85 10.84L5.22.39l11.62 6.72-2.94 2.97z"/>
+        </svg>
+        <span>{% t solitaire.cta %}</span>
+      </a>
+      <a href="{{ privacy_url | relative_url }}"
+         class="sol-ghost inline-block px-6 py-3 rounded-lg text-sm tracking-wide no-underline">
+        {% t nav.privacy %}
+      </a>
+    </div>
+  </section>
+
+  <!-- THE FOUR VARIANTS — rendered as the app's own card faces -->
+  <section class="max-w-4xl mx-auto px-6 py-14 rule">
+    <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.variants_label %}</p>
+    <h2 class="sol-title text-2xl paper mb-10">{% t solitaire.variants_title %}</h2>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+
+      <div class="sol-card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <div class="sol-title text-lg ink">{% t solitaire.klondike_name %}</div>
+            <div class="text-xs ink-soft italic mt-0.5">{% t solitaire.klondike_tagline %}</div>
+          </div>
+          <div class="text-2xl leading-none sol-black" aria-hidden="true">&#9824;</div>
+        </div>
+        <p class="text-sm ink-soft leading-relaxed">{% t solitaire.klondike_body %}</p>
+        <p class="text-xs mt-3 sol-black opacity-70">{% t solitaire.klondike_options %}</p>
+      </div>
+
+      <div class="sol-card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <div class="sol-title text-lg ink">{% t solitaire.spider_name %}</div>
+            <div class="text-xs ink-soft italic mt-0.5">{% t solitaire.spider_tagline %}</div>
+          </div>
+          <div class="text-2xl leading-none sol-red" aria-hidden="true">&#9829;</div>
+        </div>
+        <p class="text-sm ink-soft leading-relaxed">{% t solitaire.spider_body %}</p>
+        <p class="text-xs mt-3 sol-black opacity-70">{% t solitaire.spider_options %}</p>
+      </div>
+
+      <div class="sol-card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <div class="sol-title text-lg ink">{% t solitaire.freecell_name %}</div>
+            <div class="text-xs ink-soft italic mt-0.5">{% t solitaire.freecell_tagline %}</div>
+          </div>
+          <div class="text-2xl leading-none sol-black" aria-hidden="true">&#9827;</div>
+        </div>
+        <p class="text-sm ink-soft leading-relaxed">{% t solitaire.freecell_body %}</p>
+        <p class="text-xs mt-3 sol-black opacity-70">{% t solitaire.freecell_options %}</p>
+      </div>
+
+      <div class="sol-card p-6">
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <div class="sol-title text-lg ink">{% t solitaire.pyramid_name %}</div>
+            <div class="text-xs ink-soft italic mt-0.5">{% t solitaire.pyramid_tagline %}</div>
+          </div>
+          <div class="text-2xl leading-none sol-red" aria-hidden="true">&#9830;</div>
+        </div>
+        <p class="text-sm ink-soft leading-relaxed">{% t solitaire.pyramid_body %}</p>
+        <p class="text-xs mt-3 sol-black opacity-70">{% t solitaire.pyramid_options %}</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEEDS -->
+  <section class="max-w-4xl mx-auto px-6 py-14 rule">
+    <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.seed_label %}</p>
+    <h2 class="sol-title text-2xl paper mb-6">{% t solitaire.seed_title %}</h2>
+    <div class="sol-bar rounded-xl p-6">
+      <div class="sol-seed text-2xl mb-4">#123456</div>
+      <p class="text-sm muted leading-relaxed mb-3">{% t solitaire.seed_body1 %}</p>
+      <p class="text-sm muted leading-relaxed">{% t solitaire.seed_body2 %}</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="max-w-4xl mx-auto px-6 py-14 rule">
+    <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.feat_label %}</p>
+    <h2 class="sol-title text-2xl paper mb-10">{% t solitaire.feat_title %}</h2>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      <div class="sol-bar p-6 rounded-xl">
+        <div class="sol-chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">01</div>
+        <div class="sol-title text-base paper mb-2">{% t solitaire.feat1_title %}</div>
+        <p class="text-sm muted leading-relaxed">{% t solitaire.feat1_body %}</p>
+      </div>
+      <div class="sol-bar p-6 rounded-xl">
+        <div class="sol-chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">02</div>
+        <div class="sol-title text-base paper mb-2">{% t solitaire.feat2_title %}</div>
+        <p class="text-sm muted leading-relaxed">{% t solitaire.feat2_body %}</p>
+      </div>
+      <div class="sol-bar p-6 rounded-xl">
+        <div class="sol-chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">03</div>
+        <div class="sol-title text-base paper mb-2">{% t solitaire.feat3_title %}</div>
+        <p class="text-sm muted leading-relaxed">{% t solitaire.feat3_body %}</p>
+      </div>
+      <div class="sol-bar p-6 rounded-xl">
+        <div class="sol-chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">04</div>
+        <div class="sol-title text-base paper mb-2">{% t solitaire.feat4_title %}</div>
+        <p class="text-sm muted leading-relaxed">{% t solitaire.feat4_body %}</p>
+      </div>
+      <div class="sol-bar p-6 rounded-xl">
+        <div class="sol-chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">05</div>
+        <div class="sol-title text-base paper mb-2">{% t solitaire.feat5_title %}</div>
+        <p class="text-sm muted leading-relaxed">{% t solitaire.feat5_body %}</p>
+      </div>
+      <div class="sol-bar p-6 rounded-xl">
+        <div class="sol-chip inline-block px-2 py-1 rounded text-[10px] tracking-widest uppercase mb-3">06</div>
+        <div class="sol-title text-base paper mb-2">{% t solitaire.feat6_title %}</div>
+        <p class="text-sm muted leading-relaxed">{% t solitaire.feat6_body %}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT COSTS -->
+  <section class="max-w-4xl mx-auto px-6 py-14 pb-20">
+    <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.free_label %}</p>
+    <h2 class="sol-title text-2xl paper mb-6">{% t solitaire.free_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-4">{% t solitaire.free_body1 %}</p>
+    <p class="text-sm muted leading-relaxed">{% t solitaire.free_body2 %}</p>
+
+    <p class="text-xs mt-10">
+      <a href="{{ home_url | relative_url }}" class="hover:underline" style="color:#8FCDBD">{% t global.back_home %}</a>
+    </p>
+  </section>
+
+</div>

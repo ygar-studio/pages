@@ -1,0 +1,88 @@
+---
+layout: default
+title: "Privacy Policy — Ygar Solitaire"
+sticky_nav: true
+permalink: /solitaire/privacy-policy/
+sitemap:
+  priority: 0.5
+lang_en: /solitaire/privacy-policy/
+lang_fr: /fr/solitaire/privacy-policy/
+---
+
+{% comment %}
+  Ygar Solitaire identity (app docs/DESIGN.md): the quiet green-teal table, paper card faces,
+  gold only as the studio accent, hint teal for links. Noto Sans throughout — the app's UI font
+  is the system sans and Macondo Swash Caps is reserved for the splash wordmark, so the studio's
+  Metamorphous title face is deliberately not used.
+  Content mirrors the app's own docs/legal/privacy-policy.md.
+{% endcomment %}
+<style>
+  .sol { background:linear-gradient(180deg,#0C2B25 0%,#0F3D33 60%,#0C2B25 100%); color:#F6F1E6; min-height:100vh; }
+  .sol .paper { color:#F6F1E6; } .sol .muted { color:#98A0AD; }
+  .sol-title { font-family:'Noto Sans',system-ui,sans-serif; font-weight:500; letter-spacing:.02em; }
+  .sol a.teal { color:#8FCDBD; }
+  .sol .rule { border-bottom:1px solid rgba(246,241,230,.12); }
+  .sol .note { border-left:3px solid #D4A832; background:rgba(212,168,50,.10); }
+  .sol strong { color:#F6F1E6; font-weight:600; }
+  .sol code { background:#0C2B25; color:#D4A832; border:1px solid rgba(212,168,50,.3); }
+</style>
+
+{% if site.lang == "fr" %}{% assign sol_url = "/fr/solitaire/" %}{% else %}{% assign sol_url = "/solitaire/" %}{% endif %}
+
+<div class="sol">
+  <div class="max-w-2xl mx-auto px-6 py-12 pb-20">
+
+    <a href="{{ sol_url | relative_url }}" class="inline-block mb-8 text-xs tracking-wide teal hover:underline">{% t global.back %}</a>
+
+    <div class="mb-10 pb-8 rule">
+      <p class="sol-title text-[12px] tracking-[0.22em] uppercase mb-3" style="color:#3E8E7E">{% t solitaire_privacy.label %}</p>
+      <h1 class="sol-title text-3xl tracking-wide paper mb-3">{% t solitaire_privacy.title %}</h1>
+      <p class="text-xs muted tracking-wide">{% t solitaire_privacy.meta %}</p>
+    </div>
+
+    <div class="note pl-4 py-3 px-4 mb-10 rounded-r-lg">
+      <p class="text-sm muted leading-relaxed">{% t solitaire_privacy.intro %}</p>
+    </div>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s1_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-6">
+      {% t solitaire_privacy.s1_body %}
+      <a href="mailto:{{ site.email }}" class="teal hover:underline">{{ site.email }}</a>.
+    </p>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s2_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-2">{% t solitaire_privacy.s2_intro %}</p>
+    <ul class="list-disc ml-5 mb-6 space-y-1">
+      <li class="text-sm muted">{% t solitaire_privacy.s2_li1 %}</li>
+      <li class="text-sm muted">{% t solitaire_privacy.s2_li2 %}</li>
+      <li class="text-sm muted">{% t solitaire_privacy.s2_li3 %}</li>
+      <li class="text-sm muted">{% t solitaire_privacy.s2_li4 %}</li>
+      <li class="text-sm muted">{% t solitaire_privacy.s2_li5 %}</li>
+      <li class="text-sm muted">{% t solitaire_privacy.s2_li6 %}</li>
+    </ul>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s3_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-6">{% t solitaire_privacy.s3_body %}</p>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s4_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-6">{% t solitaire_privacy.s4_body %}</p>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s5_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-6">{% t solitaire_privacy.s5_body %}</p>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s6_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-6">{% t solitaire_privacy.s6_body %}</p>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s7_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-6">{% t solitaire_privacy.s7_body %}</p>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s8_title %}</h2>
+    <p class="text-sm muted leading-relaxed mb-6">{% t solitaire_privacy.s8_body %}</p>
+
+    <h2 class="sol-title font-bold text-sm tracking-wide paper mt-8 mb-3">{% t solitaire_privacy.s9_title %}</h2>
+    <p class="text-sm muted leading-relaxed">
+      <a href="mailto:{{ site.email }}" class="teal hover:underline">{{ site.email }}</a>
+    </p>
+
+  </div>
+</div>

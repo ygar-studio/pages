@@ -20,6 +20,8 @@ home:
   igi_cta: "Discover →"
   citytransport_short: "Draw the lines, upgrade the busiest to Express, and keep the city moving."
   citytransport_cta: "Discover →"
+  solitaire_short: "Four classic solitaires, seeded deals, unlimited undo — no ads, ever."
+  solitaire_cta: "Discover →"
 
 enko:
   page_title: "Enko Clues"
@@ -245,4 +247,109 @@ citytransport_privacy:
   s7_body: "The game embeds no analytics SDKs, advertising networks, crash-reporting services or cloud services. Google Play Billing is the only third-party service it talks to, and only when you make a purchase."
   s8_title: "8. Data deletion"
   s8_body: "All data is local. Uninstalling the app erases everything, including the Auto Backup copy, per Android's rules. There is nothing held on our side, so there is nothing to request deletion of."
+  s9_title: "9. Contact"
+
+solitaire:
+  page_title: "Ygar Solitaire"
+  label: "Card Game · Android"
+  tagline1: "Four classic solitaires, one calm table."
+  tagline2: "Seeded deals. Unlimited undo. No ads, ever."
+  cta: "Get it on Google Play"
+  hero_note: >
+    Tap a card to send it to its best spot, or drag it exactly where you want. Every deal has a
+    seed you can replay and share, undo is unlimited, and a hint is always one tap away.
+  variants_label: "The four variants"
+  variants_title: "One engine, four classic games"
+  klondike_name: "Klondike"
+  klondike_tagline: "The classic among classics"
+  klondike_body: >
+    Build the four foundations up from Ace to King. Empty columns take only a King, and a
+    descending, alternating-colour run moves as one.
+  klondike_options: "Draw 1 or draw 3 · unlimited, 3, 1 or 0 redeals"
+  spider_name: "Spider"
+  spider_tagline: "Eight runs, two decks"
+  spider_body: >
+    Two decks, ten columns. Assemble eight King-to-Ace same-suit runs; only a same-suit,
+    descending sequence moves as a group.
+  spider_options: "1, 2 or 4 suits"
+  freecell_name: "FreeCell"
+  freecell_tagline: "Every card visible, every move yours"
+  freecell_body: >
+    Every card is dealt face-up from the start. Four free cells each hold a card, and proper
+    supermoves shift a whole run at once.
+  freecell_options: "Near-every deal is winnable — no options to tune"
+  pyramid_name: "Pyramid"
+  pyramid_tagline: "Pairs that make thirteen"
+  pyramid_body: >
+    Clear the 28-card pyramid by pairing exposed cards that sum to thirteen — a King is removed
+    alone.
+  pyramid_options: "2, 1 or 0 redeals"
+  seed_label: "Seeded deals"
+  seed_title: "Every deal is a number you can share"
+  seed_body1: >
+    Every deal is shown as a seed, like #123456. The same variant, options and seed always
+    reproduce the exact same deal — replay it, or send the number to a friend to compare runs.
+  seed_body2: >
+    New deal picks a fresh seed at random; Restart re-deals the same one. Nothing is hidden —
+    every shuffle in the game goes through that one seed.
+  feat_label: "Features"
+  feat_title: "Built with care"
+  feat1_title: "Unlimited undo"
+  feat1_body: "Take back any move, all the way to the deal. Redo brings it right back — free, with no penalty and no limit."
+  feat2_title: "A hint that's always fair"
+  feat2_body: "The Hint button shows one legal move, straight from the same rules the engine plays by — no solver, no penalty, no cooldown."
+  feat3_title: "Auto-finish"
+  feat3_body: "Once the win is certain, Auto-finish plays out the rest of the hand in one cascade."
+  feat4_title: "Your own records"
+  feat4_body: "Win rate, best time, fewest moves and streaks, tracked separately for every variant and its options."
+  feat5_title: "Resumes exactly"
+  feat5_body: "Close the app mid-hand and come back to the same board, the same undo history, the same score."
+  feat6_title: "Four table themes, colour-blind friendly"
+  feat6_body: "Pick emerald, navy, burgundy or graphite in Settings; suits are drawn as shapes, and an optional four-colour deck tells them apart even faster."
+  free_label: "What it costs"
+  free_title: "Free. Actually free."
+  free_body1: >
+    No ads, no in-app purchases, no paid version — ever. Ygar Solitaire is free forever; the
+    studio's goal is a game worth your time, not your wallet.
+  free_body2: "No account, no sign-in, nothing to connect. Every deal runs entirely on your device."
+
+solitaire_privacy:
+  label: "Legal"
+  title: "Privacy Policy"
+  meta: "Ygar Solitaire — Ygar Studio — Last updated: July 2026"
+  intro: >
+    Ygar Solitaire is a single-player game that runs entirely offline. We collect no personal
+    data, show no advertising, and use no analytics.
+  s1_title: "1. Who we are"
+  s1_body: >
+    Ygar Solitaire is published by Ygar Studio, an independent developer.
+    For any privacy-related question, contact us at
+  s2_title: "2. Data we do not collect"
+  s2_intro: "Ygar Studio does not collect, store, or share any of the following:"
+  s2_li1: "Personal identity information (name, email, phone number)"
+  s2_li2: "Location data"
+  s2_li3: "Device identifiers or advertising IDs"
+  s2_li4: "Usage analytics or crash reports sent to our servers"
+  s2_li5: "In-app behaviour or gameplay telemetry"
+  s2_li6: "Camera, microphone, contacts or files outside the app's own storage"
+  s3_title: "3. Data stored on your device"
+  s3_body: >
+    Game progress — statistics, settings, and the interrupted game with its seed — is stored
+    only on your device, in the app's private storage. It is removed when you uninstall the app
+    or clear its data. It never leaves your device.
+  s4_title: "4. Network access"
+  s4_body: "Ygar Solitaire works fully offline and makes no network calls. The app does not request the Internet permission."
+  s5_title: "5. Permissions"
+  s5_body: >
+    The app declares a single permission: Vibrate, used only for the haptic tick on card pickup,
+    placement and illegal moves. It requests no other permission — not location, not storage,
+    not network.
+  s6_title: "6. Children's privacy"
+  s6_body: "Ygar Solitaire does not knowingly collect data from children under 13. It contains no advertising, no purchases, no chat and no account, and is suitable for all ages."
+  s7_title: "7. Third-party services"
+  s7_body: "The game embeds no analytics SDKs, advertising networks, crash-reporting services or cloud services of any kind."
+  s8_title: "8. Changes to this policy"
+  s8_body: >
+    If a future version changes any of the above — for example an optional cloud save — this
+    policy will be updated first and the change listed in the app's release notes.
   s9_title: "9. Contact"
