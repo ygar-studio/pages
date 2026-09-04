@@ -111,6 +111,11 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
   does — see **Pre-launch apps** above for the status line that goes with it.
 - **Icon**: `assets/solitaire-icon.svg` — the app's own `docs/store/icon.svg` geometry
   verbatim, cross-checked against `res/drawable/ic_launcher_foreground.xml`.
+- **No player-facing seeds** (owner ruling 2026-09-04, app `608af61`): deals are still
+  reproducible — an engine invariant, app SPEC §4 — but the number is internal and the player
+  never sees or types one. The page's vocabulary is **New game / Replay last game / Restart
+  game**, the wording Microsoft Solitaire Collection uses. Never put a `#123456` back on the
+  page, and say "game"/"hand", not "deal you can share".
 - **Free forever**: no ads, no IAP, no paid version (its SPEC §1.3 makes that a rule, not a
   current state) — so its policy is the simplest of the four: VIBRATE only, no network.
 - The app opens this policy from `game/scripts/ui/settings_screen.gd` (`PRIVACY_URL`). It used to
