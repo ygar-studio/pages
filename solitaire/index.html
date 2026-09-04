@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Ygar Solitaire"
-description: "Four classic solitaires on one calm table: Klondike, Spider, FreeCell and Pyramid. Seeded deals you can replay and share, unlimited undo, no ads."
+description: "Four classic solitaires on one calm table: Klondike, Spider, FreeCell and Pyramid. Unlimited undo, a hint that is always fair, no ads."
 sticky_nav: true
 sitemap:
   priority: 0.9
@@ -20,7 +20,7 @@ lang_fr: /fr/solitaire/
     "price": "0",
     "priceCurrency": "EUR"
   },
-  "description": "A minimalist collection of four classic solitaires — Klondike, Spider, FreeCell and Pyramid — on one shared card engine. Every deal has a seed you can replay and share. Unlimited undo, no ads, no account, fully offline.",
+  "description": "A minimalist collection of four classic solitaires — Klondike, Spider, FreeCell and Pyramid — on one shared card engine. No rigged shuffles: any hand can be restarted or replayed exactly. Unlimited undo, no ads, no account, fully offline.",
   "url": "{{ site.url }}{{ site.baseurl }}/solitaire/",
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.ygar.app.solitaire",
   "publisher": {
@@ -60,7 +60,6 @@ lang_fr: /fr/solitaire/
   .sol-ghost { border:1px solid #3E8E7E; color:#8FCDBD; }
   .sol-ghost:hover { background:rgba(62,142,126,.14); }
   .sol-chip { background:rgba(62,142,126,.18); color:#8FCDBD; }
-  .sol-seed { font-family:'Noto Sans',system-ui,sans-serif; letter-spacing:.06em; color:#D4A832; }
 </style>
 
 <div class="sol">
@@ -183,14 +182,22 @@ lang_fr: /fr/solitaire/
     </div>
   </section>
 
-  <!-- SEEDS -->
+  {% comment %}Deals are still reproducible — that is an engine invariant (app SPEC §4) — but as
+     of 2026-09-04 the seed is INTERNAL: the player never sees or types a number, and the three
+     player-facing actions below are the whole vocabulary. Do not put a "#123456" back on this
+     page.{% endcomment %}
+  <!-- FAIR DEALS -->
   <section class="max-w-4xl mx-auto px-6 py-14 rule">
-    <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.seed_label %}</p>
-    <h2 class="sol-title text-2xl paper mb-6">{% t solitaire.seed_title %}</h2>
+    <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.fair_label %}</p>
+    <h2 class="sol-title text-2xl paper mb-6">{% t solitaire.fair_title %}</h2>
     <div class="sol-bar rounded-xl p-6">
-      <div class="sol-seed text-2xl mb-4">#123456</div>
-      <p class="text-sm muted leading-relaxed mb-3">{% t solitaire.seed_body1 %}</p>
-      <p class="text-sm muted leading-relaxed">{% t solitaire.seed_body2 %}</p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="sol-chip px-3 py-1.5 rounded text-xs tracking-wide">{% t solitaire.act_new %}</span>
+        <span class="sol-chip px-3 py-1.5 rounded text-xs tracking-wide">{% t solitaire.act_replay %}</span>
+        <span class="sol-chip px-3 py-1.5 rounded text-xs tracking-wide">{% t solitaire.act_restart %}</span>
+      </div>
+      <p class="text-sm muted leading-relaxed mb-3">{% t solitaire.fair_body1 %}</p>
+      <p class="text-sm muted leading-relaxed">{% t solitaire.fair_body2 %}</p>
     </div>
   </section>
 

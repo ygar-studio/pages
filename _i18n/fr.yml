@@ -20,7 +20,7 @@ home:
   igi_cta: "Découvrir →"
   citytransport_short: "Tracez les lignes, passez la plus chargée en Express, et faites circuler la ville."
   citytransport_cta: "Découvrir →"
-  solitaire_short: "Quatre solitaires classiques, graines partageables, annulation illimitée — sans pub, jamais."
+  solitaire_short: "Quatre solitaires classiques, annulation illimitée, un indice loyal — sans pub, jamais."
   solitaire_cta: "Découvrir →"
 
 enko:
@@ -272,12 +272,12 @@ solitaire:
   page_title: "Ygar Solitaire"
   label: "Jeu de cartes · Android"
   tagline1: "Quatre solitaires classiques, une table paisible."
-  tagline2: "Graines partageables. Annulation illimitée. Sans pub, jamais."
+  tagline2: "Annulation illimitée. Un indice loyal. Sans pub, jamais."
   cta: "Disponible sur Google Play"
   hero_note: >
-    Touchez une carte pour l'envoyer à son meilleur endroit, ou glissez-la où vous voulez. Chaque
-    donne a une graine que vous pouvez rejouer et partager, l'annulation est illimitée, et un
-    indice est toujours à portée de main.
+    Touchez une carte pour l'envoyer à sa meilleure place, ou faites-la glisser exactement où
+    vous voulez. L'annulation est illimitée, un indice est toujours à portée de doigt, et
+    toute main peut être recommencée ou rejouée telle qu'elle a été distribuée.
   variants_label: "Les quatre variantes"
   variants_title: "Un seul moteur, quatre jeux classiques"
   klondike_name: "Klondike"
@@ -304,15 +304,16 @@ solitaire:
     Videz la pyramide de 28 cartes en associant des cartes exposées dont la somme fait treize —
     un Roi se retire seul.
   pyramid_options: "2, 1 ou 0 redonnes"
-  seed_label: "Donnes à graine"
-  seed_title: "Chaque donne est un numéro que vous pouvez partager"
-  seed_body1: >
-    Chaque donne affiche une graine, comme #123456. La même variante, les mêmes options et la
-    même graine reproduisent toujours exactement la même donne — rejouez-la, ou envoyez le numéro
-    à un ami pour comparer vos parties.
-  seed_body2: >
-    Nouvelle donne tire une graine au hasard ; Recommencer redistribue la même. Rien n'est caché :
-    tous les mélanges du jeu passent par cette seule graine.
+  fair_label: "Des donnes honnêtes"
+  fair_title: "Aucun battage truqué, aucune main cachée"
+  fair_body1: >
+    Tous les mélanges du jeu passent par un seul générateur du moteur, réglé donne par donne.
+    Rien n'est arrangé contre vous et rien n'est remélangé dans votre dos — les règles que
+    vous voyez sont les seules que le moteur applique.
+  fair_body2: >
+    Chaque donne étant reproductible, « Rejouer la dernière partie » redistribue exactement la
+    main précédente et « Recommencer » remet la partie en cours au coup zéro. « Nouvelle
+    partie » en distribue une autre. Rien à saisir, aucun code à retenir.
   feat_label: "Fonctionnalités"
   feat_title: "Pensé avec soin"
   feat1_title: "Annulation illimitée"
@@ -335,13 +336,16 @@ solitaire:
   free_body2: "Pas de compte, pas de connexion, rien à relier. Chaque donne tourne entièrement sur votre appareil."
 
   shots_label: "Captures"
-  shot1_alt: "Une partie de Klondike en cours sur le tapis émeraude, graine et score en barre haute."
+  shot1_alt: "Une partie de Klondike en cours sur le tapis émeraude, durée, nombre de coups et score en barre haute."
   shot2_alt: "Spider — deux jeux distribués sur dix colonnes."
   shot3_alt: "FreeCell — toutes les cartes face visible dès la donne, quatre cellules libres au-dessus."
   shot4_alt: "Pyramid — videz la pyramide en appariant les cartes visibles dont la somme fait treize."
-  shot5_alt: "Le menu — les quatre variantes, une graine à rejouer et le guide."
+  shot5_alt: "Le menu — les quatre variantes et le guide."
   shot6_alt: "Réglages — thème de tapis, jeu à quatre couleurs, animations réduites et mode gaucher."
   store_status: "Pas encore sur Google Play — la fiche s'ouvrira à la sortie."
+  act_new: "Nouvelle partie"
+  act_replay: "Rejouer la dernière partie"
+  act_restart: "Recommencer"
 solitaire_privacy:
   label: "Mentions légales"
   title: "Politique de confidentialité"
@@ -363,7 +367,7 @@ solitaire_privacy:
   s2_li6: "Caméra, microphone, contacts ou fichiers en dehors du stockage propre à l'application"
   s3_title: "3. Données stockées sur votre appareil"
   s3_body: >
-    La progression de jeu — statistiques, réglages, et la partie interrompue avec sa graine — est
+    La progression de jeu — statistiques, réglages, et la partie interrompue avec sa donne exacte — est
     stockée uniquement sur votre appareil, dans le stockage privé de l'application. Elle est
     supprimée lors de la désinstallation ou de l'effacement des données. Elle ne quitte jamais
     votre appareil.

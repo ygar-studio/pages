@@ -20,7 +20,7 @@ home:
   igi_cta: "Discover →"
   citytransport_short: "Draw the lines, upgrade the busiest to Express, and keep the city moving."
   citytransport_cta: "Discover →"
-  solitaire_short: "Four classic solitaires, seeded deals, unlimited undo — no ads, ever."
+  solitaire_short: "Four classic solitaires, unlimited undo, a fair hint — no ads, ever."
   solitaire_cta: "Discover →"
 
 enko:
@@ -260,11 +260,12 @@ solitaire:
   page_title: "Ygar Solitaire"
   label: "Card Game · Android"
   tagline1: "Four classic solitaires, one calm table."
-  tagline2: "Seeded deals. Unlimited undo. No ads, ever."
+  tagline2: "Unlimited undo. A fair hint. No ads, ever."
   cta: "Get it on Google Play"
   hero_note: >
-    Tap a card to send it to its best spot, or drag it exactly where you want. Every deal has a
-    seed you can replay and share, undo is unlimited, and a hint is always one tap away.
+    Tap a card to send it to its best spot, or drag it exactly where you want. Undo is
+    unlimited, a hint is always one tap away, and any hand can be restarted or replayed exactly
+    as it was dealt.
   variants_label: "The four variants"
   variants_title: "One engine, four classic games"
   klondike_name: "Klondike"
@@ -291,14 +292,16 @@ solitaire:
     Clear the 28-card pyramid by pairing exposed cards that sum to thirteen — a King is removed
     alone.
   pyramid_options: "2, 1 or 0 redeals"
-  seed_label: "Seeded deals"
-  seed_title: "Every deal is a number you can share"
-  seed_body1: >
-    Every deal is shown as a seed, like #123456. The same variant, options and seed always
-    reproduce the exact same deal — replay it, or send the number to a friend to compare runs.
-  seed_body2: >
-    New deal picks a fresh seed at random; Restart re-deals the same one. Nothing is hidden —
-    every shuffle in the game goes through that one seed.
+  fair_label: "Fair deals"
+  fair_title: "No rigged shuffles, no hidden hands"
+  fair_body1: >
+    Every shuffle in the game goes through one engine random generator, set per deal. Nothing is
+    stacked against you and nothing is reshuffled behind your back — the rules you can see are
+    the only rules the engine plays by.
+  fair_body2: >
+    Because each deal is reproducible, Replay last game re-deals the previous hand exactly and
+    Restart puts the current one back at move zero. New game deals a fresh hand. Nothing to type,
+    no codes to keep.
   feat_label: "Features"
   feat_title: "Built with care"
   feat1_title: "Unlimited undo"
@@ -321,13 +324,16 @@ solitaire:
   free_body2: "No account, no sign-in, nothing to connect. Every deal runs entirely on your device."
 
   shots_label: "Screenshots"
-  shot1_alt: "Klondike mid-hand on the emerald table, with the seed and score in the top bar."
+  shot1_alt: "Klondike mid-hand on the emerald table, with the timer, move count and score in the top bar."
   shot2_alt: "Spider — two decks dealt across ten columns."
   shot3_alt: "FreeCell — every card face-up from the deal, four free cells above."
   shot4_alt: "Pyramid — clear the pyramid by pairing exposed cards that sum to thirteen."
-  shot5_alt: "The menu — the four variants, a seed to replay and the how-to-play guide."
+  shot5_alt: "The menu — the four variants and the how-to-play guide."
   shot6_alt: "Settings — table theme, four-colour deck, reduced motion and left-hand mode."
   store_status: "Not on Google Play yet — the listing goes live at launch."
+  act_new: "New game"
+  act_replay: "Replay last game"
+  act_restart: "Restart game"
 solitaire_privacy:
   label: "Legal"
   title: "Privacy Policy"
@@ -349,7 +355,7 @@ solitaire_privacy:
   s2_li6: "Camera, microphone, contacts or files outside the app's own storage"
   s3_title: "3. Data stored on your device"
   s3_body: >
-    Game progress — statistics, settings, and the interrupted game with its seed — is stored
+    Game progress — statistics, settings, and the interrupted game with its exact deal — is stored
     only on your device, in the app's private storage. It is removed when you uninstall the app
     or clear its data. It never leaves your device.
   s4_title: "4. Network access"
