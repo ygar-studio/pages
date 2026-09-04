@@ -49,6 +49,14 @@ Both also carry a **Beta** badge (`global.beta`) — on their home card, in stud
 their own page beside the eyebrow, drawn in that page's own chip colours. Remove the badge
 and the status line together when a game reaches production.
 
+## CI
+
+`deploy.yml` builds with Jekyll and publishes through `actions/upload-pages-artifact`. That
+artifact **is** the production deploy — the site itself — which is the one kind the owner allows
+(ruling 2026-09-04, all projects: "uniquement des artefacts production"). Never add an upload of
+anything else: no logs, no test reports, no coverage, no tracking bundle. Failure detail belongs
+in the job log.
+
 ## Source assets
 
 All original assets live in **`C:\Users\Sesa725153\AndroidStudioProjects\enko`**:
