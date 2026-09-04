@@ -70,7 +70,10 @@ lang_fr: /fr/solitaire/
       <img src="{{ '/assets/solitaire-icon.svg' | relative_url }}" alt="Ygar Solitaire"
            class="w-24 h-24 rounded-3xl flex-shrink-0" style="box-shadow:0 8px 24px rgba(0,0,0,.4)"/>
       <div>
-        <p class="sol-eyebrow text-[11px] uppercase mb-3">{% t solitaire.label %}</p>
+        <div class="flex items-center gap-3 mb-3">
+          <p class="sol-eyebrow text-[11px] uppercase">{% t solitaire.label %}</p>
+          <span class="sol-chip px-2 py-0.5 rounded text-[10px] tracking-[0.18em] uppercase">{% t global.beta %}</span>
+        </div>
         <h1 class="sol-title text-4xl paper leading-tight mb-2">{% t solitaire.tagline1 %}</h1>
         <p class="sol-title text-xl muted">{% t solitaire.tagline2 %}</p>
       </div>

@@ -63,7 +63,10 @@ lang_fr: /fr/citytransport/
       <img src="{{ '/assets/citytransport-icon.svg' | relative_url }}" alt="City Transport"
            class="w-24 h-24 rounded-3xl flex-shrink-0"/>
       <div>
-        <p class="ct-eyebrow text-[11px] uppercase mb-3" style="color:#315963">{% t citytransport.label %}</p>
+        <div class="flex items-center gap-3 mb-3">
+          <p class="ct-eyebrow text-[11px] uppercase" style="color:#315963">{% t citytransport.label %}</p>
+          <span class="chip px-2 py-0.5 rounded text-[10px] tracking-[0.18em] uppercase">{% t global.beta %}</span>
+        </div>
         <h1 class="ct-title text-4xl ink-900 leading-tight mb-2">{% t citytransport.tagline1 %}</h1>
         <p class="ct-title text-xl ink-500">{% t citytransport.tagline2 %}</p>
       </div>

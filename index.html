@@ -235,7 +235,11 @@ lang_fr: /fr/
        class="game-card group flex flex-col gap-4 p-6 rounded-xl border border-border bg-card no-underline">
       <img src="{{ '/assets/citytransport-icon.svg' | relative_url }}" alt="City Transport" class="w-20 h-20 rounded-2xl flex-shrink-0"/>
       <div class="flex-1 min-w-0">
-        <div class="font-display text-xl tracking-wide text-white mb-1">City Transport</div>
+        <div class="flex items-center gap-2 mb-1">
+          <div class="font-display text-xl tracking-wide text-white">City Transport</div>
+          <span class="px-2 py-0.5 rounded text-[9px] tracking-[0.18em] uppercase font-sans flex-shrink-0"
+                style="border:1px solid rgba(212,169,71,0.5);color:#D4A947">{% t global.beta %}</span>
+        </div>
         <div class="font-serif text-sm text-muted">{% t home.citytransport_short %}</div>
         <div class="mt-3 text-xs tracking-widest uppercase group-hover:text-white transition-colors" style="color:#D4A947">
           {% t home.citytransport_cta %}
@@ -247,7 +251,11 @@ lang_fr: /fr/
        class="game-card group flex flex-col gap-4 p-6 rounded-xl border border-border bg-card no-underline">
       <img src="{{ '/assets/solitaire-icon.svg' | relative_url }}" alt="Ygar Solitaire" class="w-20 h-20 rounded-2xl flex-shrink-0"/>
       <div class="flex-1 min-w-0">
-        <div class="font-display text-xl tracking-wide text-white mb-1">Ygar Solitaire</div>
+        <div class="flex items-center gap-2 mb-1">
+          <div class="font-display text-xl tracking-wide text-white">Ygar Solitaire</div>
+          <span class="px-2 py-0.5 rounded text-[9px] tracking-[0.18em] uppercase font-sans flex-shrink-0"
+                style="border:1px solid rgba(212,169,71,0.5);color:#D4A947">{% t global.beta %}</span>
+        </div>
         <div class="font-serif text-sm text-muted">{% t home.solitaire_short %}</div>
         <div class="mt-3 text-xs tracking-widest uppercase group-hover:text-white transition-colors" style="color:#D4A947">
           {% t home.solitaire_cta %}

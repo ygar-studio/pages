@@ -4,6 +4,7 @@ global:
   contact: "Contact"
   back: "← Retour"
   back_home: "← Accueil"
+  beta: "Bêta"
   copyright: "© 2026 Ygar Studio. Tous droits réservés."
 
 nav:
