@@ -45,6 +45,10 @@ City Transport and Ygar Solitaire are not on Play yet, so
 correct on publish) and carry a `<app>.store_status` line under the CTA saying where the app
 actually is. Drop that line when the listing goes public.
 
+Both also carry a **Beta** badge (`global.beta`) — on their home card, in studio gold, and on
+their own page beside the eyebrow, drawn in that page's own chip colours. Remove the badge
+and the status line together when a game reaches production.
+
 ## Source assets
 
 All original assets live in **`C:\Users\Sesa725153\AndroidStudioProjects\enko`**:
