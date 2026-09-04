@@ -4,7 +4,9 @@ Static GitHub Pages site for **Ygar Studio**, an independent Android game studio
 
 ## Conventions
 
-- Each app gets its own subfolder (`enko/`, `igi/`, future apps follow the same pattern). Every app has `index.html` + `privacy-policy.html`, an `<app>:` i18n namespace (+ a `<app>_privacy:` one), an icon SVG in `assets/`, and a card in the home "Our Games" grid.
+- Each app gets its own subfolder (`enko/`, `igi/`, future apps follow the same pattern). Every app has `index.html` + `privacy-policy.html`, an `<app>:` i18n namespace (+ a `<app>_privacy:` one), an icon SVG in `assets/`, a screenshot carousel fed from
+  `assets/<app>/screenshots/`, a card in the home "Our Games" grid, and a link in the shared
+  footer (`_layouts/default.html` — all four games, not just the first two).
 - All pages use **Tailwind CSS CDN** with a shared custom config (colors + font families).
 - **Bilingual** EN/FR via the `jekyll-multiple-languages-plugin` (`{% t namespace.key %}`, `/fr/` path prefix, `lang_en` / `lang_fr` front-matter) — NOT a JS toggle.
 - The **studio shell is shared and constant**: `_layouts/default.html` nav + footer use the dark-lapis studio chrome and the gold Macondo "Ygar" wordmark on every page.
@@ -23,6 +25,25 @@ Each app page must reflect **its own app's** look so it reads as that product, n
 | **City Transport** | **Printed transit plan**: warm paper page (`#f4f1e9`), dark-ink text (`#2c3542`/`#1f2733`), water-blue rules (`#a7cbe8`), teal-slate eyebrows (`#315963`), white map tiles with `#dcd6c8` borders, green signal CTA (`#1fa45b`). Line hues (metro blue `#2569cd`, green, amber) are **accents only** — in the game a hue means a line, so they must never become page furniture. Titles **Noto Sans** with wide tracking, not Metamorphous: a decorative face fights a schematic map. | `C:\Users\Sesa725153\AndroidStudioProjects\CityTransport` |
 | **Ygar Solitaire** | **The card table**: deep green ground (`#0C2B25`→`#0F3D33`), paper card faces (`#F6F1E6`), ink text (`#1E2126`), the studio gold (`#D4A832`) used only as a rule/accent, red (`#B93F36`) for the red suits and hint teal (`#3E8E7E`) for links. Noto Sans throughout — the app reserves Macondo Swash Caps for its splash wordmark, so the studio's Metamorphous title face is deliberately unused here. | `C:\Users\Sesa725153\AndroidStudioProjects\solitaire` |
 | **Igi** | **Cream parchment** page (`#F5EBD6`→`#E8D9B8`→`#C9B084`), **ink-sepia** text (`#4A3A2E`/`#2A1F18`), **slate/gold** chrome cards (`#1A2237`/`#222C44` + `#C9A24B`), **gold stone-seal** CTA, joker-hat mascot, harlequin-diamond dividers, jewel accents. Titles **Metamorphous**, body **Noto Sans** — **Noto Serif is banned** (mirrors the app's font rule). | `C:\Users\Sesa725153\AndroidStudioProjects\igi` |
+
+## Screenshots
+
+Real frames from the real games, never mockups, **720x1280** — the size both Godot games design
+at. Photographic-looking frames go to JPEG, flat UI stays PNG (JPEG rings on crisp card edges and
+small text).
+
+| App | Where they come from |
+|---|---|
+| **Enko Clues** | `enko/store/Screenshot_*.jpg`, device captures. **Stale**: taken April 2026, so they predate the June visual refresh and the new launcher icon (`c6edd37`, `fd46e42`). Re-capture on a device when convenient. |
+| **City Transport** | Committed in the app repo at `docs/ship/screenshots/` (its README explains the harness). Copied here; the three map boards recompressed to JPEG. |
+| **Ygar Solitaire** | Generated from the game's own harness: `SHOT_SCENE` / `SHOT_VARIANT` / `SHOT_MOVES` / `SHOT_THEME` / `SHOT_SIZE` on `res://tests/shot.tscn`. Always `SHOT_THEME=emerald`, because the page's palette IS the emerald table. Capture from a **detached worktree at HEAD**, never the working tree — an in-flight refactor was caught mid-way and drew button icons on top of their labels. |
+
+## Pre-launch apps
+
+City Transport and Ygar Solitaire are not on Play yet, so
+`play.google.com/store/apps/details?id=...` **404s** for both. Both pages keep the link (it becomes
+correct on publish) and carry a `<app>.store_status` line under the CTA saying where the app
+actually is. Drop that line when the listing goes public.
 
 ## Source assets
 
@@ -69,11 +90,16 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
 **Enko Clues**
 - **Package**: `com.ygar.app.enko`
 - **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.enko`
+- **Icon**: `assets/enko-icon.svg` — a faithful copy of the app's `store/icon.svg`: a **gold maze
+  around a parchment ENKO plaque** on dark lapis. It replaced the old purple meridian sphere when
+  the app changed its launcher icon (`c6edd37` + `fd46e42`, June 2026). The page's icon halo is
+  gold to match; **the rest of the page stays purple** — `accent_purple` is still the app's UI
+  accent in `colors.xml`, and gold is only its logo / market / splash colour.
 - **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\enko`
 
 **City Transport**
 - **Package**: `com.ygar.app.citytransport`
-- **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.citytransport` (Draft — closed testing as of 2026-09-02)
+- **Play Store**: `https://play.google.com/store/apps/details?id=com.ygar.app.citytransport` (**in review** since 2026-09-04: closed-testing release submitted, 404s until it clears)
 - **Icon**: `assets/citytransport-icon.svg` — generated from the SAME fractional geometry as
   the app's own `tools/gen_logo.py`, so the site mark and the launcher icon are one drawing.
 - **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\CityTransport`
@@ -81,11 +107,15 @@ Studio logo (`assets/logo.svg`): gold extrusion `#1A1200` → `#916E00`, white f
 **Ygar Solitaire**
 - **Package**: `com.ygar.app.solitaire`
 - **Play Store**: **not published yet** — pre-launch (device hardening / internal testing
-  still open in its ROADMAP). The page links to the store URL anyway, as City Transport's does.
+  still open in its ROADMAP). The page links to the store URL anyway, as City Transport's
+  does — see **Pre-launch apps** above for the status line that goes with it.
 - **Icon**: `assets/solitaire-icon.svg` — the app's own `docs/store/icon.svg` geometry
   verbatim, cross-checked against `res/drawable/ic_launcher_foreground.xml`.
 - **Free forever**: no ads, no IAP, no paid version (its SPEC §1.3 makes that a rule, not a
   current state) — so its policy is the simplest of the four: VIBRATE only, no network.
+- The app opens this policy from `game/scripts/ui/settings_screen.gd` (`PRIVACY_URL`). It used to
+  point at `ygar.studio/solitaire/privacy` — a domain with no CNAME, and a path that does not
+  exist; City Transport had shipped the same bug. Both now point here.
 - **Source assets**: `C:\Users\Sesa725153\AndroidStudioProjects\solitaire`
 
 **Igi**

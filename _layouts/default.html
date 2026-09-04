@@ -48,10 +48,14 @@
     {% assign home_url = "/fr/" %}
     {% assign enko_url = "/fr/enko/" %}
     {% assign igi_url = "/fr/igi/" %}
+    {% assign citytransport_url = "/fr/citytransport/" %}
+    {% assign solitaire_url = "/fr/solitaire/" %}
   {% else %}
     {% assign home_url = "/" %}
     {% assign enko_url = "/enko/" %}
     {% assign igi_url = "/igi/" %}
+    {% assign citytransport_url = "/citytransport/" %}
+    {% assign solitaire_url = "/solitaire/" %}
   {% endif %}
 
   <!-- NAV -->
@@ -88,6 +92,8 @@
         <a href="{{ home_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t nav.home %}</a>
         <a href="{{ enko_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Enko Clues</a>
         <a href="{{ igi_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Igi</a>
+        <a href="{{ citytransport_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">City Transport</a>
+        <a href="{{ solitaire_url | relative_url }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">Ygar Solitaire</a>
         <a href="mailto:{{ site.email }}" class="text-xs text-muted/50 tracking-wide hover:text-muted transition-colors">{% t global.contact %}</a>
       </nav>
       <p class="text-xs text-muted/30 tracking-wide">{% t global.copyright %}</p>

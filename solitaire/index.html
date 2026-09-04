@@ -93,6 +93,36 @@ lang_fr: /fr/solitaire/
         {% t nav.privacy %}
       </a>
     </div>
+
+    {% comment %}Pre-launch: the Play URL 404s today, so the page says so instead of sending
+       visitors to a Google error page.{% endcomment %}
+    <p class="text-xs muted mt-4">{% t solitaire.store_status %}</p>
+  </section>
+
+  <!-- SCREENSHOTS — real 720x1280 frames, emerald table, captured from the game itself -->
+  <section class="max-w-4xl mx-auto px-6 py-14 rule">
+    <p class="sol-eyebrow text-[11px] uppercase mb-6">{% t solitaire.shots_label %}</p>
+    <div class="flex gap-4 overflow-x-auto pb-2"
+         style="scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none">
+      <img src="{{ '/assets/solitaire/screenshots/01-klondike.png' | relative_url }}"
+           alt="{% t solitaire.shot1_alt %}" loading="lazy" width="720" height="1280"
+           class="h-[480px] w-auto rounded-xl flex-shrink-0" style="scroll-snap-align:start;border:1px solid rgba(246,241,230,.14);box-shadow:0 8px 22px rgba(0,0,0,.3)"/>
+      <img src="{{ '/assets/solitaire/screenshots/02-spider.png' | relative_url }}"
+           alt="{% t solitaire.shot2_alt %}" loading="lazy" width="720" height="1280"
+           class="h-[480px] w-auto rounded-xl flex-shrink-0" style="scroll-snap-align:start;border:1px solid rgba(246,241,230,.14);box-shadow:0 8px 22px rgba(0,0,0,.3)"/>
+      <img src="{{ '/assets/solitaire/screenshots/03-freecell.png' | relative_url }}"
+           alt="{% t solitaire.shot3_alt %}" loading="lazy" width="720" height="1280"
+           class="h-[480px] w-auto rounded-xl flex-shrink-0" style="scroll-snap-align:start;border:1px solid rgba(246,241,230,.14);box-shadow:0 8px 22px rgba(0,0,0,.3)"/>
+      <img src="{{ '/assets/solitaire/screenshots/04-pyramid.png' | relative_url }}"
+           alt="{% t solitaire.shot4_alt %}" loading="lazy" width="720" height="1280"
+           class="h-[480px] w-auto rounded-xl flex-shrink-0" style="scroll-snap-align:start;border:1px solid rgba(246,241,230,.14);box-shadow:0 8px 22px rgba(0,0,0,.3)"/>
+      <img src="{{ '/assets/solitaire/screenshots/05-menu.png' | relative_url }}"
+           alt="{% t solitaire.shot5_alt %}" loading="lazy" width="720" height="1280"
+           class="h-[480px] w-auto rounded-xl flex-shrink-0" style="scroll-snap-align:start;border:1px solid rgba(246,241,230,.14);box-shadow:0 8px 22px rgba(0,0,0,.3)"/>
+      <img src="{{ '/assets/solitaire/screenshots/06-settings.png' | relative_url }}"
+           alt="{% t solitaire.shot6_alt %}" loading="lazy" width="720" height="1280"
+           class="h-[480px] w-auto rounded-xl flex-shrink-0" style="scroll-snap-align:start;border:1px solid rgba(246,241,230,.14);box-shadow:0 8px 22px rgba(0,0,0,.3)"/>
+    </div>
   </section>
 
   <!-- THE FOUR VARIANTS — rendered as the app's own card faces -->

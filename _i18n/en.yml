@@ -199,6 +199,13 @@ citytransport:
     Brazil and Italy are free, and every player gets two more unlocks on the house. After that a
     pack is a small one-time purchase, or you can unlock every pack at once — present and future.
 
+  shots_label: "Screenshots"
+  shot1_alt: "Paris on day 12 — four lines, one upgraded to Express in its black-and-yellow casing, and a network satisfaction of 88."
+  shot2_alt: "San Francisco — water on every side, and a network shaped by the bay."
+  shot3_alt: "Rome — a dense centre worked through three interchange hubs."
+  shot4_alt: "The campaign list — seven cities finished, the next one open, the rest still locked."
+  shot5_alt: "Maps packs — Brazil and Italy free from the start, the rest one tap from unlocking."
+  store_status: "In closed testing — the Play listing opens to everyone once the review clears."
 citytransport_privacy:
   label: "Legal"
   title: "Privacy Policy"
@@ -313,6 +320,14 @@ solitaire:
     studio's goal is a game worth your time, not your wallet.
   free_body2: "No account, no sign-in, nothing to connect. Every deal runs entirely on your device."
 
+  shots_label: "Screenshots"
+  shot1_alt: "Klondike mid-hand on the emerald table, with the seed and score in the top bar."
+  shot2_alt: "Spider — two decks dealt across ten columns."
+  shot3_alt: "FreeCell — every card face-up from the deal, four free cells above."
+  shot4_alt: "Pyramid — clear the pyramid by pairing exposed cards that sum to thirteen."
+  shot5_alt: "The menu — the four variants, a seed to replay and the how-to-play guide."
+  shot6_alt: "Settings — table theme, four-colour deck, reduced motion and left-hand mode."
+  store_status: "Not on Google Play yet — the listing goes live at launch."
 solitaire_privacy:
   label: "Legal"
   title: "Privacy Policy"

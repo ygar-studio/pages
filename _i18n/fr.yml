@@ -208,6 +208,13 @@ citytransport:
     Ensuite, un pack est un petit achat unique, ou vous débloquez tous les packs d'un coup —
     actuels et à venir.
 
+  shots_label: "Captures"
+  shot1_alt: "Paris au jour 12 — quatre lignes, une passée en Express dans son habillage noir et jaune, et une satisfaction de réseau à 88."
+  shot2_alt: "San Francisco — de l'eau de tous les côtés, et un réseau dessiné par la baie."
+  shot3_alt: "Rome — un centre dense traité par trois pôles de correspondance."
+  shot4_alt: "La liste de campagne — sept villes terminées, la suivante ouverte, les autres encore verrouillées."
+  shot5_alt: "Les packs Maps — le Brésil et l'Italie gratuits d'emblée, les autres à un geste du déblocage."
+  store_status: "En test fermé — la fiche Play s'ouvrira à tous une fois la revue passée."
 citytransport_privacy:
   label: "Mentions légales"
   title: "Politique de confidentialité"
@@ -327,6 +334,14 @@ solitaire:
     pour toujours ; l'objectif du studio est un jeu qui mérite votre temps, pas votre portefeuille.
   free_body2: "Pas de compte, pas de connexion, rien à relier. Chaque donne tourne entièrement sur votre appareil."
 
+  shots_label: "Captures"
+  shot1_alt: "Une partie de Klondike en cours sur le tapis émeraude, graine et score en barre haute."
+  shot2_alt: "Spider — deux jeux distribués sur dix colonnes."
+  shot3_alt: "FreeCell — toutes les cartes face visible dès la donne, quatre cellules libres au-dessus."
+  shot4_alt: "Pyramid — videz la pyramide en appariant les cartes visibles dont la somme fait treize."
+  shot5_alt: "Le menu — les quatre variantes, une graine à rejouer et le guide."
+  shot6_alt: "Réglages — thème de tapis, jeu à quatre couleurs, animations réduites et mode gaucher."
+  store_status: "Pas encore sur Google Play — la fiche s'ouvrira à la sortie."
 solitaire_privacy:
   label: "Mentions légales"
   title: "Politique de confidentialité"
